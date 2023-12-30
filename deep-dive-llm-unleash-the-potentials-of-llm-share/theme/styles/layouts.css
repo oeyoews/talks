@@ -1,0 +1,7 @@
+.dark #slide-content {
+  background: black;
+}
+
+.slidev-layout h1, [dir=ltr] h1, .slidev-layout [dir=ltr] h1 {
+  margin-left: 0;
+}
