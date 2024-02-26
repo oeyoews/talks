@@ -2,11 +2,17 @@
   "name": "talks",
   "version": "1.0.0",
   "description": "",
+  "packageManager": "pnpm@8.15.4",
   "private": true,
   "scripts": {
-    "build-base": "pnpm -r --filter=./packages/* run build-base"
+    "cleanup:dist": "rimraf --glob dist",
+    "build-base": "pnpm cleanup:dist && pnpm -r --filter=./packages/* run build-base"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@antfu/ni": "^0.21.12",
+    "rimraf": "^5.0.5"
+  }
 }

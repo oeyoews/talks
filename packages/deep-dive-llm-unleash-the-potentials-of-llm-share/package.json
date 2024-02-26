@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "slidev build",
-    "build-base": "slidev build --base /deep-dive-llm-unleash-the-potentials-of-llm-share/ && mkdir -p ../../dist/deep-dive-llm-unleash-the-potentials-of-llm-share && cp -r dist ../../dist/deep-dive-llm-unleash-the-potentials-of-llm-share",
+    "build-base": "slidev build --base /nekoayaka/deep-dive-llm-unleash-the-potentials-of-llm-share/ && mkdir -p ../../dist/nekoayaka/deep-dive-llm-unleash-the-potentials-of-llm-share && cp -r dist ../../dist/nekoayaka/deep-dive-llm-unleash-the-potentials-of-llm-share",
     "dev": "slidev --open",
     "export": "slidev export --with-clicks"
   },
