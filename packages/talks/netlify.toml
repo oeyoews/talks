@@ -1,0 +1,5 @@
+[[redirects]]
+from = "/nekoayaka/deep-dive-llm-unleash-the-potentials-of-llm-share/*"
+to = "https://talks-nekoayaka-1.netlify.app/:splat"
+status = 200
+force = false

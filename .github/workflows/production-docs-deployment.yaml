@@ -55,9 +55,24 @@ jobs:
       - name: Install Netlify CLI
         run: pnpm install -g netlify-cli
 
-      - name: Push to Netlify
+      - name: Push talks to Netlify
         timeout-minutes: 10
-        run: netlify deploy --dir dist --prod
+        working-directory: packages/talks
+        run: |
+          pwd
+          ls -la
+          netlify deploy --dir . --prod
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_SITE_ID: ${{ secrets.TALKS_NETLIFY_SITE_ID }}
+
+      - name: Push deep-dive-llm-unleash-the-potentials-of-llm-share to Netlify
+        timeout-minutes: 10
+        working-directory: packages/deep-dive-llm-unleash-the-potentials-of-llm-share
+        run: |
+          pwd
+          ls -la
+          netlify deploy --dir dist --prod
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.TALKS_1_NETLIFY_SITE_ID }}
