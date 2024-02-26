@@ -48,10 +48,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build docs
+      - name: Build slides
         run: |
-          pnpm packages:build
-          pnpm docs:build
+          pnpm packages:build-base
 
       - name: Install Netlify CLI
         run: pnpm install -g netlify-cli

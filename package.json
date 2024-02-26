@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "cleanup:dist": "rimraf --glob dist",
-    "build-base": "pnpm cleanup:dist && pnpm -r --filter=./packages/* run build-base"
+    "packages:build-base": "pnpm cleanup:dist && pnpm -r --filter=./packages/* run build-base"
   },
   "keywords": [],
   "author": "",
