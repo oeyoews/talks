@@ -1,12 +1,13 @@
 import { defineConfig, presetAttributify, presetIcons, presetUno } from 'unocss'
 
-console.log(...Array.from({ length: 10 }, (_, i) => `delay-${(i + 1) * 100}`))
-
 export default defineConfig({
   shortcuts: [
   ],
+  rules: [
+    ['font-math', { 'font-family': 'Latin Modern Roman, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif' }],
+  ],
   safelist: [
-    ...Array.from({ length: 10 }, (_, i) => `delay-${(i + 1) * 100}`),
+    ...Array.from({ length: 30 }, (_, i) => `delay-${(i + 1) * 100}`),
   ],
   presets: [
     presetUno({
