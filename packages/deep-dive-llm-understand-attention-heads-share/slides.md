@@ -184,10 +184,129 @@ preload: false
 <Content-1-3 />
 
 ---
+title: 多维空间 - 向量空间究竟代表了什么？
+clicks: 2
+layout: page-wide
+background: /backgrounds/1.png
+preload: false
+---
+
+<Content-1-4 />
+
+---
 title: Part 02 自注意力
 layout: section
 sectionNumber: 2
 sectionTitle: 自注意力
+background: /backgrounds/2.png
+preload: false
+---
+
+---
+title: Part 02 自注意力
+clicks: 1
+layout: page
+background: /backgrounds/1.png
+preload: false
+---
+
+<Content-2-1 />
+
+---
+title: Part 02 自注意力
+clicks: 2
+layout: page
+background: /backgrounds/1.png
+preload: false
+---
+
+<Content-2-2 />
+
+---
+title: Part 02 自注意力
+clicks: 2
+layout: page
+background: /backgrounds/1.png
+preload: false
+---
+
+<Content-2-3 />
+
+---
+title: Part 02 自注意力
+clicks: 2
+layout: page
+background: /backgrounds/1.png
+preload: false
+---
+
+<Content-2-4 />
+
+---
+title: Part 02 自注意力
+clicks: 2
+layout: page
+background: /backgrounds/1.png
+preload: false
+---
+
+<Content-2-5 />
+
+---
+title: Part 02 自注意力
+clicks: 2
+layout: page
+background: /backgrounds/1.png
+preload: false
+---
+
+<Content-2-6 />
+
+---
+title: Part 02 自注意力
+clicks: 2
+layout: page
+background: /backgrounds/1.png
+preload: false
+---
+
+<Content-2-7 />
+
+---
+title: Part 02 自注意力
+clicks: 2
+layout: page
+background: /backgrounds/1.png
+preload: false
+---
+
+<Content-2-8 />
+
+---
+title: Part 02 自注意力
+clicks: 2
+layout: page
+background: /backgrounds/1.png
+preload: false
+---
+
+<Content-2-9 />
+
+---
+title: Part 02 自注意力
+clicks: 2
+layout: page
+background: /backgrounds/1.png
+preload: false
+---
+
+<Content-2-10 />
+
+---
+title: Part 03 摇摆的树
+layout: section
+sectionNumber: 3
+sectionTitle: 摇摆的树
 background: /backgrounds/2.png
 preload: false
 ---
@@ -202,6 +321,126 @@ preload: false
 ---
 
 ---
+title: Part 03 摇摆的树
+clicks: 1
+layout: page
+background: /backgrounds/1.png
+preload: false
+---
+
+<Content-3-1 />
+
+---
+title: Part 03 摇摆的树
+clicks: 2
+layout: page
+background: /backgrounds/1.png
+preload: false
+---
+
+<Content-3-2 />
+
+---
+title: Part 03 摇摆的树
+clicks: 1
+layout: page
+background: /backgrounds/1.png
+preload: false
+---
+
+<Content-3-3 />
+
+---
+title: Part 03 摇摆的树
+clicks: 2
+layout: page
+background: /backgrounds/1.png
+preload: false
+---
+
+<Content-3-4 />
+
+---
+title: Part 03 摇摆的树
+clicks: 2
+layout: page
+background: /backgrounds/1.png
+preload: false
+---
+
+<Content-3-5 />
+
+---
+title: Part 03 摇摆的树
+clicks: 2
+layout: page
+background: /backgrounds/1.png
+preload: false
+---
+
+<Content-3-6 />
+
+---
+title: Part 03 摇摆的树
+clicks: 2
+layout: page
+background: /backgrounds/1.png
+preload: false
+---
+
+<Content-3-7 />
+
+---
+title: Part 03 摇摆的树
+clicks: 2
+layout: page
+background: /backgrounds/1.png
+preload: false
+---
+
+<Content-3-8 />
+
+---
+title: Part 03 摇摆的树
+clicks: 2
+layout: page
+background: /backgrounds/1.png
+preload: false
+---
+
+<Content-3-9 />
+
+---
+title: Part 03 摇摆的树
+clicks: 2
+layout: page
+background: /backgrounds/1.png
+preload: false
+---
+
+<Content-3-10 />
+
+---
+title: Part 03 摇摆的树
+clicks: 2
+layout: page
+background: /backgrounds/1.png
+preload: false
+---
+
+<Content-3-11 />
+
+---
+title: Part 03 摇摆的树
+clicks: 2
+layout: page
+background: /backgrounds/1.png
+preload: false
+---
+
+<Content-3-12 />
+
+---
 title: Part 04 大大大挑战
 layout: section
 sectionNumber: 4
@@ -209,6 +448,46 @@ sectionTitle: 大大大挑战
 background: /backgrounds/2.png
 preload: false
 ---
+
+---
+title: Part 04 大大大挑战
+clicks: 1
+layout: page
+background: /backgrounds/1.png
+preload: false
+---
+
+<Content-4-1 />
+
+---
+title: Part 04 大大大挑战
+clicks: 2
+layout: page
+background: /backgrounds/1.png
+preload: false
+---
+
+<Content-4-2 />
+
+---
+title: Part 04 大大大挑战
+clicks: 2
+layout: page
+background: /backgrounds/3.png
+preload: false
+---
+
+<Content-4-3 />
+
+---
+title: Part 04 大大大挑战
+clicks: 2
+layout: page
+background: /backgrounds/3.png
+preload: false
+---
+
+<Content-4-4 />
 
 ---
 title: Thanks

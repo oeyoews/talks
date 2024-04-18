@@ -40,13 +40,13 @@ const hex4 = '#fb7185'
       :class="[
         [0].includes($slidev.nav.clicks) ? 'opacity-0' : '',
         [1, 2].includes($slidev.nav.clicks) ? 'opacity-100' : '',
-        [3].includes($slidev.nav.clicks) ? 'opacity-100' : '',
+        [3].includes($slidev.nav.clicks) ? 'opacity-0' : '',
       ]"
     >
       <TresCanvas :alpha="true" :antialias="true">
         <TresGridHelper :args="[12, 12]" />
         <TresPerspectiveCamera
-          :position="[4, 2, 4]"
+          :position="[2, 1, 2]"
           :look-at="[0, 0, 0]"
         />
         <OrbitControls />
