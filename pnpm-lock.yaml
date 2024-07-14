@@ -116,12 +116,15 @@ importers:
       '@types/three':
         specifier: ^0.163.0
         version: 0.163.0
+      playwright-chromium:
+        specifier: ^1.43.1
+        version: 1.43.1
       three:
         specifier: ^0.163.0
         version: 0.163.0
       vite:
         specifier: ^5.2.9
-        version: 5.2.9
+        version: 5.2.9(@types/node@20.11.20)
 
   packages/deep-dive-llm-understand-attention-heads-share/theme:
     dependencies:
@@ -1880,7 +1883,7 @@ packages:
       three-custom-shader-material: 5.4.0(three@0.163.0)
       three-stdlib: 2.29.6(three@0.163.0)
       tweakpane: 4.0.3
-      vue: 3.4.20
+      vue: 3.4.20(typescript@5.3.3)
     transitivePeerDependencies:
       - '@react-three/fiber'
       - '@vue/composition-api'
@@ -1897,7 +1900,7 @@ packages:
       '@vue/devtools-api': 6.6.1
       '@vueuse/core': 10.8.0(vue@3.4.20)
       three: 0.163.0
-      vue: 3.4.20
+      vue: 3.4.20(typescript@5.3.3)
     transitivePeerDependencies:
       - '@vue/composition-api'
     dev: true
@@ -2597,7 +2600,7 @@ packages:
     dependencies:
       '@vue/compiler-ssr': 3.4.20
       '@vue/shared': 3.4.20
-      vue: 3.4.20
+      vue: 3.4.20(typescript@5.3.3)
     dev: true
 
   /@vue/shared@3.4.20:
@@ -6032,8 +6035,23 @@ packages:
       playwright-core: 1.41.2
     dev: true
 
+  /playwright-chromium@1.43.1:
+    resolution: {integrity: sha512-HL/11hcpIYVt/Rw7wTf5xwm+W0R76JGDDjRxGtBkgMuUqi0Q4UYmx+F/QxW/Z+aApSbDtHd3naRFcL/Jt7Aidg==}
+    engines: {node: '>=16'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      playwright-core: 1.43.1
+    dev: true
+
   /playwright-core@1.41.2:
     resolution: {integrity: sha512-VaTvwCA4Y8kxEe+kfm2+uUUw5Lubf38RxF7FpBxLPmGe5sdNkSg5e3ChEigaGrX7qdqT3pt2m/98LiyvU2x6CA==}
+    engines: {node: '>=16'}
+    hasBin: true
+    dev: true
+
+  /playwright-core@1.43.1:
+    resolution: {integrity: sha512-EI36Mto2Vrx6VF7rm708qSnesVQKbxEWvPrfA1IPY6HgczBplDx7ENtx+K2n4kJ41sLLkuGfmb0ZLSSXlDhqPg==}
     engines: {node: '>=16'}
     hasBin: true
     dev: true
@@ -7214,7 +7232,7 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vite@5.2.9:
+  /vite@5.2.9(@types/node@20.11.20):
     resolution: {integrity: sha512-uOQWfuZBlc6Y3W/DTuQ1Sr+oIXWvqljLvS881SVmAj00d5RdgShLcuXWxseWPd4HXwiYBFW/vXHfKFeqj9uQnw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -7242,6 +7260,7 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': 20.11.20
       esbuild: 0.20.2
       postcss: 8.4.38
       rollup: 4.14.3
@@ -7272,7 +7291,7 @@ packages:
       '@vue/composition-api':
         optional: true
     dependencies:
-      vue: 3.4.20
+      vue: 3.4.20(typescript@5.3.3)
     dev: true
 
   /vue-eslint-parser@9.4.2(eslint@8.57.0):
@@ -7310,21 +7329,6 @@ packages:
     transitivePeerDependencies:
       - '@vue/composition-api'
       - typescript
-    dev: true
-
-  /vue@3.4.20:
-    resolution: {integrity: sha512-xF4zDKXp67NjgORFX/HOuaiaKYjgxkaToK0KWglFQEYlCw9AqgBlj1yu5xa6YaRek47w2IGiuvpvrGg/XuQFCw==}
-    peerDependencies:
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@vue/compiler-dom': 3.4.20
-      '@vue/compiler-sfc': 3.4.20
-      '@vue/runtime-dom': 3.4.20
-      '@vue/server-renderer': 3.4.20(vue@3.4.20)
-      '@vue/shared': 3.4.20
     dev: true
 
   /vue@3.4.20(typescript@5.3.3):
