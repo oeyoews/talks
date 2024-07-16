@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const sentenceRaw = ref('深入浅出 LLM：释放 LLM 的潜力')
+const sentenceRaw = ref('深入浅出：大语言模型')
 </script>
 
 <template>

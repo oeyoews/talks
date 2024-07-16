@@ -1,11 +1,11 @@
 ---
 theme: ./theme
-background: /backgrounds/cover.jpg
+background: /backgrounds/cover.png
 highlighter: shikiji
 lineNumbers: false
 drawings:
   persist: false
-title: 深入浅出 LLM：如何释放 LLM 的潜力
+title: 深入浅出：大语言模型
 mdc: true
 layout: cover
 preload: false
@@ -13,11 +13,11 @@ clicks: 0
 ---
 
 <h1 class="text-left font-semibold text-4xl">
-  深入浅出 LLM：如何释放 LLM 的潜力
+  深入浅出：大语言模型
 </h1>
 
 <p text-left class="mt-5!">
-  DaoCloud Neko
+  DaoCloud 张凡石
 </p>
 
 <!--
