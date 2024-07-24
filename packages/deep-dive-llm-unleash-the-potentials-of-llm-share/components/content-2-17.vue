@@ -118,7 +118,7 @@ const chars = {
     像人一样思考
   </div>
 
-  <div flex flex-col>
+  <div flex flex-col relative h-full>
     <div my-2 text-neutral-400>
       <span transition="all ease-in-out" duration-1500>
         「单字接龙」游戏
@@ -195,6 +195,18 @@ const chars = {
           </div>
         </div>
       </div>
+    </div>
+    <div
+      absolute right-0 bottom-16
+      transition="all ease-in-out" duration-1500
+      :class="[
+        $slidev.nav.clicks === 0 ? 'opacity-0' : '',
+        $slidev.nav.clicks > 0 && $slidev.nav.clicks <= 5 ? 'opacity-100' : '',
+        $slidev.nav.clicks === 6 ? 'opacity-0' : '',
+      ]"
+    >
+      <span text="[10px]" text-black>扫码关注解答疑惑</span>
+      <img src="/daocloud-qr.jpeg" w-20 h-20>
     </div>
   </div>
 </template>

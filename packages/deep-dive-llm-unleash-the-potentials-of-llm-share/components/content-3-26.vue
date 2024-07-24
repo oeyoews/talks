@@ -24,35 +24,35 @@
             </span>
           </div>
         </div>
-        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800">
+        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800" backdrop-blur-md>
           <div>
             <span>
               听写转写
             </span>
           </div>
         </div>
-        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800">
+        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800" backdrop-blur-md>
           <div>
             <span>
               总结会议纪要
             </span>
           </div>
         </div>
-        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800">
+        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800" backdrop-blur-md>
           <div>
             <span>
               生成 Confluence 文档写入 API 调用
             </span>
           </div>
         </div>
-        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800">
+        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800" backdrop-blur-md>
           <div>
             <span>
               计算向量数据库 Word Embedding
             </span>
           </div>
         </div>
-        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800">
+        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800" backdrop-blur-md>
           <div>
             <span>
               写入 Chat with Meeting Notes 专属的向量数据库

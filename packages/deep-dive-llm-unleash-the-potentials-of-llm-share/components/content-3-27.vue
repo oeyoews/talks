@@ -17,42 +17,42 @@
       ]"
     >
       <div flex flex-col gap-2 transition="all ease-in-out" duration-1500>
-        <div text-xl>
+        <div text-xl backdrop-blur-md>
           <div>
             <span>
               一个能够处理和解决运维信息收集难题的 GPT
             </span>
           </div>
         </div>
-        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800">
+        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800" backdrop-blur-md>
           <div>
             <span>
               通过命令行获取当前系统信息
             </span>
           </div>
         </div>
-        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800">
+        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800" backdrop-blur-md>
           <div>
             <span>
               搜索最相关的运维 oncall 任务故障排查日志
             </span>
           </div>
         </div>
-        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800">
+        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800" backdrop-blur-md>
           <div>
             <span>
               生成命令行调用的命令
             </span>
           </div>
         </div>
-        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800">
+        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800" backdrop-blur-md>
           <div>
             <span>
               向用户发起信息收集请求（命令执行授权）
             </span>
           </div>
         </div>
-        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800">
+        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800" backdrop-blur-md>
           <div>
             <span>
               执行命令，同步返回结果，循环解决直至收集完成

@@ -17,49 +17,49 @@
       ]"
     >
       <div flex flex-col gap-2 transition="all ease-in-out" duration-1500>
-        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800">
+        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800" backdrop-blur-md>
           <div>
             <span>
               面向开发者的搜索引擎 Phind.com 和搜索大师 Perplexity.ai
             </span>
           </div>
         </div>
-        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800">
+        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800" backdrop-blur-md>
           <div>
             <span>
               ChatGPT 插件
             </span>
           </div>
         </div>
-        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800">
+        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800" backdrop-blur-md>
           <div>
             <span>
               操作 Android 手机
             </span>
           </div>
         </div>
-        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800">
+        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800" backdrop-blur-md>
           <div>
             <span>
               操作 Microsoft Office 全家桶的 Copilot
             </span>
           </div>
         </div>
-        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800">
+        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800" backdrop-blur-md>
           <div>
             <span>
               金融分析师 Finchat.io
             </span>
           </div>
         </div>
-        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800">
+        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800" backdrop-blur-md>
           <div>
             <span>
               法律顾问 ChatLaw.cloud
             </span>
           </div>
         </div>
-        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800">
+        <div rounded-lg px-4 py-2 bg="sky-900 opacity-30" border="2 solid sky-800" backdrop-blur-md>
           <div>
             <span>
               玩游戏

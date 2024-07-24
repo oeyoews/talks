@@ -18,7 +18,7 @@
     >
       <div flex flex-col gap-2 transition="all ease-in-out" duration-1500>
         <div flex flex-col gap-4 text-xl>
-          <div border="2 solid green-700" bg="green-800 opacity-10" w-full flex flex-col items-center gap-2 rounded-lg px-8 py-4>
+          <div border="2 solid green-700" bg="green-800 opacity-10" w-full flex flex-col items-center gap-2 rounded-lg px-8 py-4 backdrop-blur-sm>
             <div flex flex-row gap-2>
               <div>
                 <span>LLM</span>
@@ -28,7 +28,7 @@
               </div>
             </div>
           </div>
-          <div border="2 solid sky-700" bg="sky-800 opacity-10" w-full flex flex-col items-center gap-2 rounded-lg px-8 py-4>
+          <div border="2 solid sky-700" bg="sky-800 opacity-10" w-full flex flex-col items-center gap-2 rounded-lg px-8 py-4 backdrop-blur-sm>
             <div flex flex-row gap-2>
               <div>
                 <span>LangChain</span>
@@ -39,35 +39,35 @@
             </div>
           </div>
           <div flex gap-4>
-            <div border="2 solid purple-700" bg="purple-800 opacity-10" w-full flex flex-col items-center gap-2 rounded-lg px-4 py-4>
+            <div border="2 solid purple-700" bg="purple-800 opacity-10" w-full flex flex-col items-center gap-2 rounded-lg px-4 py-4 backdrop-blur-sm>
               <div flex flex-row gap-2>
                 <div>
                   <span>API</span>
                 </div>
               </div>
             </div>
-            <div border="2 solid purple-700" bg="purple-800 opacity-10" w-full flex flex-col items-center gap-2 rounded-lg px-4 py-4>
+            <div border="2 solid purple-700" bg="purple-800 opacity-10" w-full flex flex-col items-center gap-2 rounded-lg px-4 py-4 backdrop-blur-sm>
               <div flex flex-row gap-2>
                 <div>
                   <span>知识库</span>
                 </div>
               </div>
             </div>
-            <div border="2 solid purple-700" bg="purple-800 opacity-10" w-full flex flex-col items-center gap-2 rounded-lg px-4 py-4>
+            <div border="2 solid purple-700" bg="purple-800 opacity-10" w-full flex flex-col items-center gap-2 rounded-lg px-4 py-4 backdrop-blur-sm>
               <div flex flex-row gap-2>
                 <div>
                   <span>向量数据库</span>
                 </div>
               </div>
             </div>
-            <div border="2 solid purple-700" bg="purple-800 opacity-10" w-full flex flex-col items-center gap-2 rounded-lg px-4 py-4>
+            <div border="2 solid purple-700" bg="purple-800 opacity-10" w-full flex flex-col items-center gap-2 rounded-lg px-4 py-4 backdrop-blur-sm>
               <div flex flex-row gap-2>
                 <div>
                   <span>工具</span>
                 </div>
               </div>
             </div>
-            <div border="2 solid purple-700" bg="purple-800 opacity-10" w-full flex flex-col items-center gap-2 rounded-lg px-4 py-4>
+            <div border="2 solid purple-700" bg="purple-800 opacity-10" w-full flex flex-col items-center gap-2 rounded-lg px-4 py-4 backdrop-blur-sm>
               <div flex flex-row gap-2>
                 <div>
                   <span>自动化</span>

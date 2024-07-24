@@ -694,7 +694,7 @@ preload: false
 
 ---
 title: Part 03 原初智能 - 如何利用这种规律智能？
-clicks: 1
+clicks: 2
 layout: page
 background: /backgrounds/1.png
 preload: false

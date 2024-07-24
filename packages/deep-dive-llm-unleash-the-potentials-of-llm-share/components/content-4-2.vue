@@ -16,7 +16,7 @@
     >
       <div w-full flex flex-col gap-4>
         <div
-          w-full rounded-lg bg-opacity-50 px-4 py-2 border="2 solid"
+          w-full rounded-lg bg-opacity-50 px-4 py-2 border="2 solid" backdrop-blur-md
           transition="all ease-in-out" duration-1500
           :class="[
             $slidev.nav.clicks === 0 ? 'border-sky-800 opacity-50 bg-sky-800' : '',
@@ -52,7 +52,7 @@
           </div>
         </div>
         <div
-          w-full rounded-lg bg-opacity-50 px-4 py-2 border="2 solid"
+          w-full rounded-lg bg-opacity-50 px-4 py-2 border="2 solid" backdrop-blur-md
           transition="all ease-in-out" duration-1500
           :class="[
             $slidev.nav.clicks === 0 ? 'border-sky-800 opacity-50 bg-sky-800' : '',
@@ -88,7 +88,7 @@
           </div>
         </div>
         <div
-          w-full rounded-lg bg-opacity-50 px-4 py-2 border="2 solid"
+          w-full rounded-lg bg-opacity-50 px-4 py-2 border="2 solid" backdrop-blur-md
           transition="all ease-in-out" duration-1500
           :class="[
             $slidev.nav.clicks === 0 ? 'border-sky-800 opacity-50 bg-sky-800' : '',
@@ -113,7 +113,7 @@
           </div>
         </div>
         <div
-          w-full rounded-lg bg-opacity-50 px-4 py-2 border="2 solid"
+          w-full rounded-lg bg-opacity-50 px-4 py-2 border="2 solid" backdrop-blur-md
           transition="all ease-in-out" duration-1500
           :class="[
             $slidev.nav.clicks === 0 ? 'border-sky-800 opacity-50 bg-sky-800' : '',

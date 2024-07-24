@@ -11,7 +11,7 @@
     </div>
     <div mt-4 flex flex-row gap-4>
       <div
-        w="[30%]" transition="all ease-in-out" bg="green-900 opacity-50" flex-1 rounded-lg p-4 text-xl duration-1500 delay-500 h="[350px]"
+        w="[30%]" transition="all ease-in-out" bg="cyan-800 opacity-20" flex-1 rounded-lg p-4 text-xl duration-1500 delay-500 h="[350px]" backdrop-blur-md
         :class="[
           $slidev.nav.clicks === 1 ? 'opacity-100' : 'opacity-0',
         ]"
