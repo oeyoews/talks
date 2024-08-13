@@ -1,7 +1,5 @@
 import { defineConfig, presetAttributify, presetIcons, presetUno } from 'unocss'
 
-console.log(...Array.from({ length: 10 }, (_, i) => `delay-${(i + 1) * 100}`))
-
 export default defineConfig({
   shortcuts: [
   ],
