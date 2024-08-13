@@ -1,6 +1,13 @@
 {
   "cSpell.words": [
-    "slidev"
+    "antfu",
+    "attributify",
+    "iconify",
+    "seedrandom",
+    "seriph",
+    "slidev",
+    "unocss",
+    "vueuse"
   ],
   "prettier.enable": false,
   "editor.formatOnSave": false,
@@ -8,8 +15,6 @@
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "never"
   },
-  // Enable the ESlint flat config support
-  "eslint.experimental.useFlatConfig": true,
   // The following is optional.
   // It's better to put under project setting `.vscode/settings.json`
   // to avoid conflicts with working with different eslint configs
@@ -32,5 +37,5 @@
   },
   "typescript.tsdk": "node_modules/typescript/lib",
   "search.followSymlinks": false,
-  "search.useIgnoreFiles": true,
+  "search.useIgnoreFiles": true
 }
