@@ -147,8 +147,6 @@ importers:
         specifier: ^1.1.16
         version: 1.1.16
 
-  packages/2024-08-23-kubecon-hk: {}
-
   packages/deep-dive-llm-understand-attention-heads-share:
     devDependencies:
       '@slidev/types':
