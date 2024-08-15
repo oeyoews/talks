@@ -5,6 +5,7 @@ css: unocss
 colorSchema: dark
 transition: fade-out
 title: Sit Back and Relax with Fault Awareness and Robust Instant Recovery for Large Scale AI Workloads
+exportFilename: KubeCon HK 2024.08 - Sit Back and Relax with Fault Awareness and Robust Instant Recovery for Large Scale AI Workloads
 lineNumbers: false
 drawings:
   persist: false

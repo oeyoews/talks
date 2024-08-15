@@ -146,6 +146,9 @@ importers:
       '@iconify-json/twemoji':
         specifier: ^1.1.16
         version: 1.1.16
+      playwright-chromium:
+        specifier: ^1.46.0
+        version: 1.46.0
 
   packages/deep-dive-llm-understand-attention-heads-share:
     devDependencies:
