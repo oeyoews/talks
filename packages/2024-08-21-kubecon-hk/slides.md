@@ -11,8 +11,10 @@ drawings:
   persist: false
 mdc: true
 clicks: 0
+preload: false
 # glowSeed: 26
 glowSeed: 228
+routerMode: hash
 ---
 
 # Sit Back and Relax with Fault Awareness and Robust Instant Recovery for Large Scale AI Workloads
