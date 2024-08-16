@@ -13,18 +13,17 @@ mdc: true
 clicks: 0
 preload: false
 glowSeed: 458
-routerMode: hash
 ---
 
-<div w-41vh>
+<div translate-x--30>
 
 # No More Runtime Setup!
 
 Let's Bundle, Distribute, Deploy, Scale LLMs Seamlessly with Ollama Operator
 
-</div>
-
 DaoCloud Fanshi Zhang
+
+</div>
 
 <div w-full absolute bottom-0 left-0 flex items-center transform="translate-x--10 translate-y--10">
   <div w-full flex items-center justify-end gap-4>
@@ -323,11 +322,11 @@ class: py-10
 
 <div mt-10 />
 
-<div class="mx-auto grid max-w-md grid-cols-1 gap-6 text-gray-300 md:max-w-3xl md:grid-cols-2 xl:max-w-6xl xl:auto-rows-fr xl:grid-cols-3">
+<div class="flex gap-6 text-gray-300">
 
 <v-clicks>
   <div
-    class="relative overflow-hidden flex flex-col border-2 border-solid border-black/5 rounded-xl bg-black/50 p-8 shadow-lg"
+    class="relative overflow-hidden flex flex-col border-2 border-solid border-black/5 rounded-xl bg-black/50 p-8 shadow-lg w-[33%]"
     transition-all duration-500 ease-in-out
     :class="$clicks < 1 ? 'translate-x--20' : 'translate-x-0'"
   >
@@ -340,7 +339,7 @@ class: py-10
   </div>
 
   <div
-    class="relative overflow-hidden flex flex-col border-2 border-solid border-black/5 rounded-xl bg-black/50 p-8 shadow-lg"
+    class="relative overflow-hidden flex flex-col border-2 border-solid border-black/5 rounded-xl bg-black/50 p-8 shadow-lg w-[33%]"
     transition-all duration-500 ease-in-out
     :class="$clicks < 2 ? 'translate-x--20' : 'translate-x-0'"
   >
@@ -353,7 +352,7 @@ class: py-10
   </div>
 
   <div
-    class="relative overflow-hidden flex flex-col border-2 border-solid border-black/5 rounded-xl bg-black/50 p-8 shadow-lg"
+    class="relative overflow-hidden flex flex-col border-2 border-solid border-black/5 rounded-xl bg-black/50 p-8 shadow-lg w-[33%]"
     transition-all duration-500 ease-in-out
     :class="$clicks < 3 ? 'translate-x--20' : 'translate-x-0'"
   >
@@ -434,6 +433,8 @@ class: px-35
 glowSeed: 205
 ---
 
+<div flex gap-4 mt-4>
+
 <div flex>
   <div flex-1>
     <h1 mb="0!">Ollama</h1>
@@ -445,7 +446,7 @@ glowSeed: 205
 Deploying large language models involves complex setups and management.
 -->
 
-<div grid grid-cols-2 gap-4 mt-4>
+<div flex flex-col gap-4>
 
 <v-clicks>
   <div
@@ -455,12 +456,12 @@ Deploying large language models involves complex setups and management.
     shadow-lg
     transition duration-500 ease-in-out
     flex
-    h-16
+    h-12
   >
-    <div px-3 py-3 flex items-center justify-center>
+    <div px-2 py-2 flex items-center justify-center>
       <div i-carbon:plane h-6 w-6 />
     </div>
-    <div bg="purple-800/30" w-full px-4 py-2 flex items-center justify-center text-center font-bold>
+    <div bg="purple-800/30" w-full px-3 py-2 flex items-center justify-center text-center font-bold>
       <span>Lightweight</span>
     </div>
   </div>
@@ -471,16 +472,18 @@ Deploying large language models involves complex setups and management.
     shadow-lg
     transition duration-500 ease-in-out
     flex
-    h-16
+    h-12
   >
-    <div px-3 py-3 flex items-center justify-center>
-      <div i-carbon:globe h-6 w-6 />
+    <div px-2 py-2 flex items-center justify-center>
+      <div i-carbon:globe h-4 w-6 />
     </div>
-    <div bg="indigo-800/30" w-full px-4 py-2 flex items-center justify-center text-center font-bold>
+    <div bg="indigo-800/30" w-full px-3 py-2 flex items-center justify-center text-center font-bold>
       <span>Universal & Compatible</span>
     </div>
   </div>
 </v-clicks>
+
+</div>
 
 </div>
 
