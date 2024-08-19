@@ -842,7 +842,13 @@ class: py-10
 
 <span>Light! Shot! Action!</span>
 
-<div mt-10 />
+<NuAsciinemaPlayer
+  src="/asciinema/demo.cast"
+  :controls="'auto'"
+  :rows="18"
+  :speed="3"
+  w-full
+/>
 
 ---
 class: py-10
