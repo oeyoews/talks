@@ -1,33 +1,34 @@
-name: Build Slides to Netlify
+name: Deploy pages
 
 on:
+  workflow_dispatch:
   push:
-    branches:
-      - 'main'
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 env:
   STORE_PATH: ''
 
 jobs:
   build:
-    name: Build
-    runs-on: ubuntu-22.04
-    environment:
-      name: Production Docs
-      url: https://talks.ayaka.io/nekoayaka
+    runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+      - uses: actions/checkout@v4
 
-      - name: Install Node.js 20.x
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: 20.x
+          node-version: 'lts/*'
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v2
         with:
           run_install: false
 
@@ -36,8 +37,8 @@ jobs:
         run: |
           echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
-      - name: Obtain pnpm store cache
-        uses: actions/cache@v3
+      - name: Configure pnpm cache
+        uses: actions/cache@v4
         with:
           path: ${{ env.STORE_PATH }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -47,33 +48,24 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build slides
-        run: |
-          pnpm packages:build-base
+      - name: Build
+        run: pnpm run packages:build-base
 
-      - name: Install Netlify CLI
-        run: pnpm install -g netlify-cli
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
-      - name: Push talks to Netlify
-        timeout-minutes: 10
-        working-directory: packages/talks
-        run: |
-          pwd
-          ls -la
-          netlify deploy --dir . --prod
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
 
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.TALKS_NETLIFY_SITE_ID }}
-
-      - name: Push deep-dive-llm-unleash-the-potentials-of-llm-share to Netlify
-        timeout-minutes: 10
-        working-directory: packages/deep-dive-llm-unleash-the-potentials-of-llm-share
-        run: |
-          pwd
-          ls -la
-          netlify deploy --dir dist --prod
-
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.TALKS_1_NETLIFY_SITE_ID }}
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
