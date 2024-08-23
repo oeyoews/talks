@@ -37,9 +37,9 @@ DaoCloud Fanshi Zhang
 <!--
 Hi!
 
-And greetings to everyone attended our session here.
+And greetings to everyone attended my session here.
 
-In today's session, me, Fanshi Zhang, will introduce the amazing tool called Ollama to serve models, and the associated operator to deploy and scale LLMs seamlessly.
+In today's session, me, Fanshi Zhang, will introduce the amazing tool called Ollama to serve models, along with the associated operator to deploy and scale LLMs seamlessly.
 -->
 
 ---
@@ -83,7 +83,7 @@ glowSeed: 205
 </div>
 
 <!--
-Before we start, let's introduce ourselves.
+Before we start, let's introduce where I am working now.
 
 [click] I am from DaoCloud. We are primarily focusing on field where we will cohere Kubernetes and AI workloads together.
 -->
@@ -1645,10 +1645,13 @@ glowSeed: 230
   </div>
   <div text-sm text="zinc-300" text-right flex flex-col gap-3 mt-3>
     <div>
-      Slides open sourced at <a href="https://github.com/BaizeAI/talks"><div inline-block mr-1 translate-y-0.8 i-ri:github-fill />github.com/BaizeAI/talks</a>
+      Slides open sourced at <a href="https://github.com/nekomeowww/talks"><div inline-block mr-1 translate-y-0.8 i-ri:github-fill />github.com/nekomeowww/talks</a>
     </div>
     <div>
       Slides built on top of <a href="https://sli.dev"><div inline-block mr-1 translate-y-0.8 i-logos:slidev />sli.dev</a>
+    </div>
+    <div self-end mt-16 translate-x-6>
+      <img src="/slides_qr.png" w-50 />
     </div>
   </div>
 </div>
