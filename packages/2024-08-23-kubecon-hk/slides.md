@@ -13,6 +13,7 @@ mdc: true
 clicks: 0
 preload: false
 glowSeed: 458
+routerMode: hash
 ---
 
 <div translate-x--30>
@@ -674,7 +675,7 @@ docker run -it --rm --net=host nvcr.io/nvidia/tritonserver:24.07-py3-sdk
 <!--
 That's the concepts, let's get into some real use cases.
 
-For here, A triton serving example is shown here, which is a popular model serving tool made by NVIDIA.
+A triton serving example is shown here, which is a popular model serving tool made by NVIDIA.
 
 How many steps would it take?
 
@@ -696,7 +697,7 @@ class: py-10
 
 This is how TorchServe can be used to serve models:
 
-```shell {|7,11-12}
+```shell
 python ./ts_scripts/install_dependencies.py --cuda=cu121
 
 conda install torchserve torch-model-archiver torch-workflow-archiver -c pytorch
@@ -724,6 +725,8 @@ That's a lot.
 I know that's a framework, but still, there are so many steps that we can automate and simplify.
 
 I know some of the companies internal tools are doing this, but what about the open source community? Not very much.
+
+Hey, where is distributing and bundling?
 
 But I'm here to introduce you a famously known tool called Ollama.
 -->

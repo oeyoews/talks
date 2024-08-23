@@ -1,5 +1,5 @@
 {
-  "name": "deep-dive-llm-unleash-the-potentials-of-llm-share",
+  "name": "deep-dive-llm-understand-attention-heads-share",
   "type": "module",
   "private": true,
   "scripts": {
@@ -7,12 +7,5 @@
     "build-base": "slidev build --base /nekoayaka/deep-dive-llm-unleash-the-potentials-of-llm-share/",
     "dev": "slidev --open",
     "export": "slidev export --with-clicks"
-  },
-  "devDependencies": {
-    "@slidev/types": "^0.22.7",
-    "@tresjs/cientos": "^3.9.0",
-    "@tresjs/core": "^3.9.0",
-    "@types/three": "^0.163.0",
-    "three": "^0.163.0"
   }
 }

@@ -1,7 +1,7 @@
 ---
 theme: ./theme
 background: /backgrounds/cover.png
-highlighter: shikiji
+highlighter: shiki
 lineNumbers: false
 drawings:
   persist: false
@@ -10,6 +10,7 @@ mdc: true
 layout: cover
 preload: false
 clicks: 0
+routerMode: hash
 ---
 
 <h1 class="text-left font-semibold text-4xl">
