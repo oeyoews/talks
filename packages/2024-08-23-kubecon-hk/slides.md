@@ -39,9 +39,7 @@ Hi!
 
 And greetings to everyone attended our session here.
 
-In today's session, me, Fanshi Zhang, with another amazing software engineer Kebe Liu here will be presenting our work on some of the works we have done so far on distributed training of AI and workloads.
-
-But, don't worry if you are not familiar with machine learning or distribution training , we will get you covered when introducing the concepts.
+In today's session, me, Fanshi Zhang, will introduce the amazing tool called Ollama to serve models, and the associated operator to deploy and scale LLMs seamlessly.
 -->
 
 ---
@@ -87,7 +85,7 @@ glowSeed: 205
 <!--
 Before we start, let's introduce ourselves.
 
-[click] We are the software engineers come from DaoCloud. We are primarily focusing on field where we will cohere [click] Kubernetes and AI workloads together.
+[click] I am from DaoCloud. We are primarily focusing on field where we will cohere Kubernetes and AI workloads together.
 -->
 
 ---
@@ -155,7 +153,7 @@ glowSeed: 105
   </div>
 </div>
 
-<div w-full absolute bottom-0 left-0 flex items-center transform="translate-x--10 translate-y--10">
+<div v-click="3" w-full absolute bottom-0 left-0 flex items-center transform="translate-x--10 translate-y--10">
   <div w-full flex items-center justify-end gap-4>
     <img src="/nekomeoww-qr.png" h-50>
   </div>
@@ -164,9 +162,9 @@ glowSeed: 105
 <!--
 As background, [click] Me, Fanshi Zhang, a software engineer at DaoCloud, focusing on AI and Kubernetes.
 
-My story won't stop for just Kubernetes, and AI, but also a contributor to Golang, Vue.js, Langchain, etc.
+[click] But my story won't simply stop for just Kubernetes, or AI, but also being as the contributor to Golang, Vue.js, Langchain, many other communities.
 
-(By the way, this presentation is written in Vue and TypeScript, and it's open sourced :D).
+(By the way, this presentation is written in Vue and TypeScript, so, I am a full stack developer :D).
 
 [click] I am also the co-founder of one of the famously known knowledge management tool Nolebase, served for Obsidian and Logseq. Co-founder of the generative UI devtool called Guii.ai, which I will show you in the demo later.
 -->
@@ -191,7 +189,13 @@ class: py-10
 I know it's kind of boring to listen the talks for three days.
 I believe a quick demo will show you what we are talking about.
 
-And the potentials.
+And... the potentials.
+
+What we doing here is to quickly deploy a model with Ollama on a kind created cluster.
+
+And be able to use ollama's official cli to interact with the deployed model.
+
+...I... hope this will give you a better understanding of what we are talking about.
 -->
 
 ---
@@ -208,7 +212,9 @@ glowSeed: 205
 </div>
 
 <!--
-Deploying large language models involves complex setups and management.
+Let's get to the journey.
+
+As being in the role of infra team as well as AI team, many of you may understand that deploying large language models involves complex setups and management.
 -->
 
 ---
@@ -311,11 +317,13 @@ transition: 'none'
 </div>
 
 <!--
-I know some of you may have seen this, but let's go through it again. From the basics.
+I know some of you may have seen this, but let's go through it again. From the basics. I will go through this really fast.
 
-[click] In machine learning field, model is basically a set of matrix and vectors, which is used to predict the output based on the input data. Say, we have a set of vectors
+[click] So, In machine learning, model is basically a set of matrix and vectors, which is used to predict the output based on the input data.
 
-[click] That's not the whole picture, so let's zoom out a little bit.
+Say, we have a set of vectors
+
+[click] Apparently that's not the whole picture, so let's zoom out a little bit.
 -->
 
 ---
@@ -356,9 +364,11 @@ class: py-10
 </div>
 
 <!--
-This is the "visualization" fundamental building block of every machine learning models. (or Hinton diagram if you like). With that, the concept of training, serving is just splitting data into different slices and blocks (which we call batches), what to do? [click] we will then feed them into the [click] CPU or GPU hardware devices to do the computation as well as inference.
+This is the "visualization" of fundamental building block of every models. (or Hinton diagram if you like).
 
-That's it, as simple as that.
+With that, the concept of training, serving is just doing the work to split data into different slices and blocks (which we call batches), what to do? [click] we will then feed them into the [click] CPU or GPU hardware devices to do the computation as well as inference.
+
+That's it, as simple as you may imagined.
 -->
 
 ---
@@ -439,7 +449,15 @@ class: py-10
 </div>
 
 <!--
-Discuss why distributing models is challenging, including dependencies and environment setup.
+Then let's talk about how to deploy and publish models, to understand why distributing models is challenging.
+
+[click] Step one, will be training, obviously.
+
+[click] Perhaps you may need a LoRA for fundamental models.
+
+[click] When we have the LoRA, we will merge the weights.
+
+[click] For running and performance on different devices, we will quantize the weights.
 -->
 
 ---
@@ -470,9 +488,17 @@ glowSeed: 368
 </div>
 
 <!--
-So, why do failures occur?
+That's the steps to produce a model.
 
-Before we get into the rabbit hole any further, let's take a look at the common [click] hardware failures, [click] network issues, [click] or even software bugs.
+What do we do for mounting and deploying models?
+
+There are actually two ways in practice.
+
+[click] One is to mount the model with volumes.
+
+[click] While another option is to bundle the model into images.
+
+But that comes problems.
 -->
 
 ---
@@ -538,6 +564,18 @@ class: py-10
 
 </div>
 
+<!--
+[click] Personally I think there is a limit, or boundaries.
+
+[click] When distributing models, if we are gonna to bundle all of them into the images, what will happen? Models are large, if every node will pull the new 83GB of Llama 2 model separately, it will be a huge overhead, where to store them? Can Dragonfly handle this?
+
+[click] No matter what method we use, how can we effectively to have every needed nodes to have the weights? Again, can Dragonfly do? Or we need to have a dedicated storage for this? How many storages are needed for control plane nodes?
+
+[click] And, for serverless and edge scenarios, how can we handle the cold boot and caching? Rolling update models is a challenge, how can we do this?
+
+Ok, that leaves questions.
+-->
+
 ---
 class: py-10
 ---
@@ -593,6 +631,16 @@ class: py-10
 
 </div>
 
+<!--
+Is that the end? No! Absolutely not. Serving is waiting for us.
+
+[click] Managing dependencies across environments can be tedious and error-prone.
+
+[click] I bet many of you have experienced it already, is, setting up environments of Python, CUDA, conda, mamba, blah, blah are quite complex and time-consuming, more often, the installation process may take more times than just tweaking the codes and fixing the bugs.
+
+[click] Last one is getting the model, which I've showed you already, there's still a lot work to do.
+-->
+
 ---
 class: py-10
 ---
@@ -623,6 +671,16 @@ docker run -it --rm --net=host nvcr.io/nvidia/tritonserver:24.07-py3-sdk
 /workspace/install/bin/image_client -m densenet_onnx -c 3 -s INCEPTION /workspace/images/mug.jpg
 ```
 
+<!--
+That's the concepts, let's get into some real use cases.
+
+For here, A triton serving example is shown here, which is a popular model serving tool made by NVIDIA.
+
+How many steps would it take?
+
+Quite simple. But notice, it's ONLY one portion of the whole process, ONLY serves for the serving part.
+-->
+
 ---
 class: py-10
 ---
@@ -636,22 +694,39 @@ class: py-10
 
 <div mt-10 />
 
-This is how Triton Inference Server can be used to serve models:
+This is how TorchServe can be used to serve models:
 
 ```shell {|7,11-12}
-# Step 1: Create the example model repository
-git clone -b r24.07 https://github.com/triton-inference-server/server.git
-cd server/docs/examples
-./fetch_models.sh
+python ./ts_scripts/install_dependencies.py --cuda=cu121
 
-# Step 2: Launch triton from the NGC Triton container
-docker run --gpus=1 --rm --net=host -v ${PWD}/model_repository:/models nvcr.io/nvidia/tritonserver:24.07-py3 tritonserver --model-repository=/models
+conda install torchserve torch-model-archiver torch-workflow-archiver -c pytorch
 
-# Step 3: Sending an Inference Request
-# In a separate console, launch the image_client example from the NGC Triton SDK container
-docker run -it --rm --net=host nvcr.io/nvidia/tritonserver:24.07-py3-sdk
-/workspace/install/bin/image_client -m densenet_onnx -c 3 -s INCEPTION /workspace/images/mug.jpg
+git clone https://github.com/pytorch/serve.git
+
+mkdir model_store
+
+wget https://download.pytorch.org/models/densenet161-8d451a50.pth
+
+torchserve --start --ncs --model-store model_store --models densenet161.mar
+
+pip install -U grpcio protobuf grpcio-tools
+
+python -m grpc_tools.protoc --proto_path=frontend/server/src/main/resources/proto/ --python_out=ts_scripts --grpc_python_out=ts_scripts frontend/server/src/main/resources/proto/inference.proto frontend/server/src/main/resources/proto/management.proto
+
+python ts_scripts/torchserve_grpc_client.py infer densenet161 examples/image_classifier/kitten.jpg
 ```
+
+<!--
+Okay... what about torchserve?
+
+That's a lot.
+
+I know that's a framework, but still, there are so many steps that we can automate and simplify.
+
+I know some of the companies internal tools are doing this, but what about the open source community? Not very much.
+
+But I'm here to introduce you a famously known tool called Ollama.
+-->
 
 ---
 layout: intro
@@ -713,6 +788,14 @@ Deploying large language models involves complex setups and management.
 
 </div>
 
+<!--
+A tool that simplifies the process of transforming, merging, composing, deploying and serving for large language models.
+
+It's lightweighted enough to have single binary to ship, without literally no dependencies.
+
+It's universal, works on pretty much every known platforms, so the boundaries of hardware and drivers are no longer a problem.
+-->
+
 ---
 class: py-10
 ---
@@ -744,6 +827,16 @@ SYSTEM """You are a helpful assistant that introduces Kubernetes and KubeCon eve
 ```
 
 </div>
+
+<!--
+This is how you can customize the model with Ollama.
+
+You can add multiple layers of LoRA.
+
+You can pre-configure the parameters.
+
+And even prompt engineering, and pre-configure the system messages.
+-->
 
 ---
 class: py-10
@@ -785,6 +878,18 @@ ollama create mymodel -f ./Modelfile
 <div i-carbon:checkmark-filled text-green-400 inline-block mr-4 /><span>All compatible with OCI standards</span>
 
 </div>
+
+<!--
+As you see, the structure of the file, and the syntax is the same as Dockerfile.
+
+And yes, the way to build and bundle the images is the same as Docker.
+
+While it's still compatible with OCI standards.
+
+If it's compatible to OCI standards, can we re-use the registry?
+
+The answer is yes.
+-->
 
 ---
 class: py-10
@@ -868,13 +973,19 @@ glowSeed: 128
   </div>
 </div>
 
+<!--
+Just like Docker, Ollama can push and pull the models to the registry.
+
+If you have Harbor, that's all you need. Push and pull. Distribution is done.
+-->
+
 ---
 class: py-10
 ---
 
 # Ollama - Serving
 
-<span>Just like OCI images</span>
+<span>Just like Docker containers</span>
 
 <div mt-10 />
 
@@ -912,6 +1023,12 @@ class: py-10
   </div>
 </div>
 
+<!--
+What about serving? Is it the same as Docker?
+
+Hard to distinguish, a single run command, made it easy to serve across all platforms, environments.
+-->
+
 ---
 class: flex justify-center items-center gap-20 px40 text-xl
 ---
@@ -942,9 +1059,9 @@ class: flex justify-center items-center gap-20 px40 text-xl
 </div>
 
 <!--
-Since we have spent our time on layering concepts and knowledges, let's see what we have done so far.
+I know it sounds like I am a team of Ollama and I am promoting it. Nah, I am not.
 
-[click] Introducing Ollama Operator.
+Let me [click] introduce Ollama Operator.
 
 [click] This is our one simple intall-to-go plugin solution that brings Ollama to your Kubernetes clusters.
 -->
@@ -1041,6 +1158,20 @@ class: py-10
 
 </div>
 
+<!--
+Just forget about the downsides of Ollama and challenges, let's talk about the features that Ollama Operator brings.
+
+We got [click] model caching, [click] model preloading, [click] scaling with replicas, [click] apply correct resource limit, and [click] achieve operator automation.
+
+Why?
+
+I do know that Ollama currently supported model pooling, preloading and swapping. But, actually, back in the days when I was working on Ollama Operator, they are not supported.
+
+For the other problems, for general Ollama servers, there is no way to set the resource limit, and even assign GPUs to it. WHich makes it hard to control.
+
+And what if you want to create a model mesh for the models? It is not possible for just Ollama, we here brought the power of Deployment and replicas to help to scale the models, and have multiple different models run simultaneously.
+-->
+
 ---
 class: py-10
 ---
@@ -1084,6 +1215,20 @@ class: py-10
     </div>
   </v-click>
 </div>
+
+<!--
+Besides all of that.
+
+[click] I made it "kuberneted", which means the Ollama Operator works with any certified Kubernetes cluster, kind, k3s, minikube, k8s, all work the same.
+
+[click] It's cloud agnostic, deploy on any cloud provider or on-premises. I have it in my homelab, for tons of models.
+
+[click] It's IoT friendly, deploy on any cloud provider or on-premises, even Raspberry Pi.
+
+[click] Loads of the operators requires additional plugins or CRDs, but not Ollama Operator.
+
+I made it as simple as possible, no additional plugins or CRDs required. Which is another zero-dependency design.
+-->
 
 ---
 class: py-10
@@ -1135,6 +1280,10 @@ OLLAMA_HOST="<node-ip>:11434" ollama run phi "Translate this to French: Hello, w
 
 </v-click>
 
+<!--
+It's easy to use, install the operator controller, create the model CR, that's it.
+-->
+
 ---
 class: py-10
 ---
@@ -1179,6 +1328,14 @@ OLLAMA_HOST=<Node ip>:30101 ollama run phi
 
 </v-click>
 
+<!--
+Dislike the taste of Kubernetes YAML manifests?
+
+I made a CLI called kollama to help you to deploy the models.
+
+It's also a kubectl plugin too, so you can use it as a kubectl sub-command too.
+-->
+
 ---
 class: py-10
 ---
@@ -1204,6 +1361,10 @@ spec:
 ```
 
 </v-click>
+
+<!--
+Scaling is easy too, just a single patch, you can scale the model to 5 replicas.
+-->
 
 ---
 class: py-10
@@ -1272,12 +1433,20 @@ class: py-10
 
 </div>
 
+<!--
+This is the overview of architecture of Ollama Operator, and the corresponding components it will interact with.
+
+The major parts are the Model Pooling, and the Inference Worker nodes.
+
+Where they will share the same cache storage to read and write the models.
+-->
+
 ---
 class: py-10
 glow: bottom
 ---
 
-# Why even bother to create a operator for Ollama?
+# How It Works
 
 <span>Model pooling</span>
 

@@ -4,8 +4,10 @@ highlighter: shiki
 css: unocss
 colorSchema: dark
 transition: fade-out
-title: Sit Back and Relax with Fault Awareness and Robust Instant Recovery for Large Scale AI Workloads
-exportFilename: KubeCon HK 2024.08 - Sit Back and Relax with Fault Awareness and Robust Instant Recovery for Large Scale AI Workloads
+title: Sit Back and Relax with Fault Awareness and Robust Instant Recovery for
+  Large Scale AI Workloads
+exportFilename: KubeCon HK 2024.08 - Sit Back and Relax with Fault Awareness and
+  Robust Instant Recovery for Large Scale AI Workloads
 lineNumbers: false
 drawings:
   persist: false
@@ -33,11 +35,11 @@ DaoCloud Fanshi Zhang, Kebe Liu
 <!--
 Hi!
 
-And greetings to everyone attended our session here.
+Good afternoon, and greetings to everyone attended our session here.
 
 In today's session, me, Fanshi Zhang, with another amazing software engineer Kebe Liu here will be presenting our work on some of the works we have done so far on distributed training of AI and workloads.
 
-But, don't worry if you are not familiar with machine learning or distribution training , we will get you covered when introducing the concepts.
+But, don't worry if you are not familiar with machine learning or distributed training , we will get you covered when introducing the concepts.
 -->
 
 ---
@@ -74,7 +76,9 @@ glowSeed: 205
 <!--
 Before we start, let's introduce ourselves.
 
-[click] We are the software engineers come from DaoCloud. We are primarily focusing on field where we will cohere [click] Kubernetes and AI workloads together.
+[click] We are the software engineers come from DaoCloud, one of the famously known corporation that put much efforts into open source and Kubernetes ecosystems.
+
+With now primarily focusing on field to cohere Kubernetes and AI together.
 -->
 
 ---
@@ -118,9 +122,9 @@ glowSeed: 205
 </div>
 
 <!--
-As background, [click] Kebe Liu is one of the member of Istio Steering Committee, while working on AI stuff, he is also focusing on cloud-native and Istio, eBPF and other areas in recent years.
+As background, [click] Kebe Liu is one of the member of Istio Steering Committee, while working on AI stuff, he is also focusing on the other Cloud native projects like Istio, eBPF, etc. in recent years.
 
-[click] Me, Fanshi Zhang, I am a software engineer at DaoCloud, focusing on AI and Kubernetes. I am also a contributor to the Kubernetes community.
+[click] Me, Fanshi Zhang, I am a software engineer at DaoCloud, focusing on AI and Kubernetes. I am also a contributor to the Kubernetes community. As well as contributor to Golang, Vue communities.
 -->
 
 ---
@@ -132,7 +136,7 @@ class: flex justify-center items-center gap-20 px40 text-xl
 <!--
 Without further ado, let's jump right into the rabbit hole and see what we have prepared for you today.
 
-The very first one thing to get off is distributed training...
+The **first** one thing to get off... is **distributed training**...
 -->
 
 ---
@@ -280,7 +284,9 @@ class: py-10
 </div>
 
 <!--
-This is the "visualization" fundamental building block of every machine learning models. (or Hinton diagram if you like). With that, the concept of training is just splitting data into different slices and blocks (which we call batches), what to do? [click] we will then feed them into the [click] CPU or GPU hardware devices to do the computation as well as inference.
+Where this is the "visualization" of fundamental building block of every machine learning models. (or Hinton diagram if you like).
+
+With that, the concept of training is just splitting data into different slices and blocks (which we call batches), what do we do next? [click] we will then feed them into the [click] CPU or GPU hardware devices to perform computation as well as inference.
 -->
 
 ---
@@ -362,9 +368,13 @@ glowSeed: 120
 </div>
 
 <!--
-Surely we know what is model and what was doing during training. [click] But in modern days, models are getting larger and larger, [click] they wouldn't be able to fit into a single instance of GPU. Therefore, to deal with the "too large" problem, [click] we will need to distribute them to multiple GPU clusters.
+Surely we now understand what model is and what was doing during training. There comes challenges.
 
-Ok, everything seems fine. More GPUs means faster training, right? Or is it? [click] It turns out the memory and power consumption will not be the only problems we will face, But also the failures.
+[click] In modern days, models are getting larger and larger, [click] they wouldn't be able to fit into a single instance of GPU. Therefore, to deal with the "too large" problem, [click] we will need to distribute them to multiple GPU clusters.
+
+Ok, everything seems fine. More GPUs means faster training, right? Or is it?
+
+[click] It turns out the memory and power consumption will not be the only problems we will face, but also the failures.
 -->
 
 ---
@@ -399,9 +409,9 @@ glowSeed: 368
 </div>
 
 <!--
-So, why do failures occur?
+Sure...? why do failures occur?
 
-Before we get into the rabbit hole any further, let's take a look at the common [click] hardware failures, [click] network issues, [click] or even software bugs.
+Before we dive in deeper, let's take a step back to the common issues: [click] hardware failures, [click] network issues, [click] and, software bugs.
 -->
 
 ---
@@ -419,19 +429,6 @@ class: py-10
 
 <div flex flex-col>
 
-<v-clicks>
-
-```txt {|4,6-9}
-[ 4254.197816] NVRM: GPU at PCI:0000:5d:00: GPU-f1906b9b-557a-e961-045c-9fe4be3ce012
-[ 4254.197854] NVRM: GPU Board Serial Number: 1653923026510
-[ 4254.197860] NVRM: Xid (PCI:0000:5d:00): 79, pid='<unknown>', name=<unknown>, GPU has fallen off the bus.
-[ 4254.197871] NVRM: GPU 0000:5d:00.0: GPU has fallen off the bus.
-[ 4254.197878] NVRM: GPU 0000:5d:00.0: GPU serial number is 1653923026510.
-[ 4254.197913] NVRM: A GPU crash dump has been created. If possible, please run
-               NVRM: nvidia-bug-report.sh as root to collect this data before
-               NVRM: the NVIDIA kernel module is unloaded.
-```
-
 ```txt {|3,4-5}
 [14387.209961] NVRM: The NVIDIA GPU 0000:5d:00.0
                NVRM: (PCI ID: 10de:2330) installed in this system has
@@ -444,12 +441,31 @@ class: py-10
 [14387.573380] nvidia-modeset: Loading NVIDIA Kernel Mode Setting Driver for UNIX platforms  525.125.06  Tue May 30 04:58:48 UTC 2023
 ```
 
-</v-clicks>
+```txt {|4,6-9}
+[ 4254.197816] NVRM: GPU at PCI:0000:5d:00: GPU-f1906b9b-557a-e961-045c-9fe4be3ce012
+[ 4254.197854] NVRM: GPU Board Serial Number: 1653923026510
+[ 4254.197860] NVRM: Xid (PCI:0000:5d:00): 79, pid='<unknown>', name=<unknown>, GPU has fallen off the bus.
+[ 4254.197871] NVRM: GPU 0000:5d:00.0: GPU has fallen off the bus.
+[ 4254.197878] NVRM: GPU 0000:5d:00.0: GPU serial number is 1653923026510.
+[ 4254.197913] NVRM: A GPU crash dump has been created. If possible, please run
+               NVRM: nvidia-bug-report.sh as root to collect this data before
+               NVRM: the NVIDIA kernel module is unloaded.
+```
 
 </div>
 
 <!--
+Let's take a look at this log we've captured by executing `dmesg` when inspecting the syslog.
 
+[click] The line indicates
+
+> GPU has fallen off the bus,
+
+[click] and
+
+> the NVIDIA probe routine failed for 1 device(s).
+
+Those are the common issue that we will face when dealing with GPUs and PCIe, from the perspective of kernel.
 -->
 
 ---
@@ -469,7 +485,7 @@ class: py-10
 
 <v-clicks>
 
-```txt {|5,10-13}
+```txt {5,10-13}
 node-1:185:1027 [7] NCCL INFO [Service thread] Connection closed by localRank 0
 node-1:180:1028 [2] NCCL INFO [Service thread] Connection closed by localRank 0
 node-1:184:1030 [6] NCCL INFO [Service thread] Connection closed by localRank 0
@@ -494,7 +510,15 @@ NET/IB : Got completion from peer 10.42.0.2<47534> with error 5, opcode 48, len 
 </div>
 
 <!--
+This is another one, related to NCCL.
 
+This was captured during some training experiments with PyTorch. [click] We can see that
+
+> the connection was closed by localRank 0
+
+and the NCCL watchdog thread terminated with exception:
+
+> NCCL error: remote process exited or there was a network error.
 -->
 
 ---
@@ -538,7 +562,7 @@ RuntimeError: expected scalar type BFloat16 but found Float
 </div>
 
 <!--
-
+And the last one! [click] This is a software bug that was captured during the training process. [click] We can see that the error was caused by the mismatch type Float against BFloat16.
 -->
 
 ---
@@ -558,19 +582,35 @@ glow: right
 
 <v-clicks depth="2">
 
-- Instead of <span text-cyan-400><div inline-block i-carbon:ibm-cloud-resiliency translate-y-0.8 /> `Deployment`</span> like workloads, they are more like <span text-pink-400 v-mark="{ at: 9, color: 'rgb(255, 144, 235)', type: 'underline' }"><div inline-block i-carbon:ibm-cloud-pak-manta-automated-data-lineage translate-y-0.8 /> `StatefulSet`</span>
+- Instead of <span text-cyan-400><div inline-block i-carbon:ibm-cloud-resiliency translate-y-0.8 /> `Deployment`</span> like workloads, they are more like <span text-pink-400><div inline-block i-carbon:ibm-cloud-pak-manta-automated-data-lineage translate-y-0.8 /> `StatefulSet`</span>
 - When bootstrapping, the <span text-violet-400>main node</span> (`rank 0`) will be the first to start
 - Then negotiate with <span text-blue-400>other nodes</span> (`rank != 0`) to join the training through <span text="[#64b023]"><div inline-block translate-y-0.8 mr-1 i-bi:nvidia />NCCL</span>
   - Calculate topology
   - Calculate connectivity
   - Calculate bandwidth
 - Once everyone is ready, minibatch will be calculated and sent to each node
-- Every step, or epoch, a <span text-sky-300 v-mark="{ at: 10, color: 'rgb(144, 200, 255)', type: 'underline' }">Ring AllReduce</span> or <span text-sky-300 v-mark="{ at: 11, color: 'rgb(144, 200, 255)', type: 'underline' }">AllReduce</span> operation will be performed across the nodes
+- Every step, or epoch, a <span text-sky-300>Ring AllReduce</span> or <span text-sky-300 >AllReduce</span> operation will be performed across the nodes
 
 </v-clicks>
 
 <!--
-[click] Instead of a normal deployment, distributed training jobs are more like a StatefulSet. [click] When bootstrapping, the main node (rank 0) will be the first to start, [click] then negotiate with other nodes (rank != 0) to join the training through NCCL. While both [click] calculate topology, [click] calculate connectivity, [click] calculate bandwidth, etc. [click] Once everyone is ready, minibatch will be calculated and sent to each node. [click] During training, every step, or epoch, a Ring AllReduce or AllReduce operation will be performed across the nodes.
+Hmm, so where is the so called "Irreversible" issues?
+
+Sorry to spent so many slides to build up the fundamental. You have done well!
+
+Please allow me to explain how distributed training works in PyTorch with one additional slide.
+
+Ok...
+
+[click] Instead of a normal deployment, distributed training jobs are more like a StatefulSet.
+
+[click] When bootstrapping, the main node (rank 0) will be the first to start, [click] then negotiate with other nodes (rank != 0) to join the training through NCCL.
+
+While both [click] calculate topology, [click] calculate connectivity, [click] calculate bandwidth, etc.
+
+[click] Once everyone is ready, minibatch will be calculated and sent to each node.
+
+[click] During training, every step, or epoch, a Ring AllReduce or AllReduce operation will be performed across the nodes.
 -->
 
 ---
@@ -686,7 +726,29 @@ clicks: 7
 <div mt-12 />
 
 <!--
+That's so many words!
 
+Don't worry, Relax, let's simulate one interactively.
+
+Let's look the overview first.
+
+[click] Say we have a distributed training job running on a GPU cluster, [click] pay attentions to how the error is propagated from one node to another...
+
+[click] For giving nodes in cluster that running distributed training workloads. [click] the main node (rank 0) will be the first to start, then negotiate with other nodes (rank != 0) to join the training through NCCL.
+
+[click] Once everything is ready, the training will be started across the nodes.
+
+[click] However...... What if one of the node (or pod) encountered some critical issues due to NCCL, or GPU failures?
+
+[click] That's the most interesting part, see the propagation of the error from one node to another?
+
+Kind of way to abstracted, here's the explanation.
+
+That means, when one of the node failed, for NCCL based distributed training, since every node requires the others to continuously communicating, when it comes to the case where the NCCL is hanging, well, nothing gets done, right? Every one is basically sit there and keep waiting.
+
+How can we resolve this issue?
+
+Sure it it able to kill the ALL related nodes (or pods) and restart. But it's obviously, there must be something wrong.
 -->
 
 ---
@@ -714,7 +776,7 @@ glowSeed: 100
   <div bg="violet-800/10" px-4 py-3>
     <div>
       <span>
-        Distribution algorithm is purely implemented by <span text="[#f6432f]"><div inline-block mr-1 translate-y-0.8 i-devicon:pytorch />PyTorch</span>, <span text="[#64b023]"><div inline-block translate-y-0.8 mr-1 i-bi:nvidia />NCCL</span> itself.
+        Distributed algorithm is purely implemented by <span text="[#f6432f]"><div inline-block mr-1 translate-y-0.8 i-devicon:pytorch />PyTorch</span>, <span text="[#64b023]"><div inline-block translate-y-0.8 mr-1 i-bi:nvidia />NCCL</span> itself.
       </span>
     </div>
     <div text-xs flex gap-2 mt-1 text-zinc-400>
@@ -771,6 +833,20 @@ glowSeed: 100
 </v-clicks>
 
 </div>
+
+<!--
+Where went wrong?
+
+First, [click] the distributed algorithm is purely implemented by PyTorch, or NCCL itself. It's hard to debug, trace, make it managed, and controlled.
+
+Second, [click] unlike nowadays Kubernetes Operators, healing, orchestrating still hard to achieve. It's hard to auto-heal, auto-recover, auto-mitigate. Obviously, we have no ways to detect what's happening.
+
+Third, [click] detecting failures of drivers, hardwares, GPUs, or even network is still a challenge. It's hard to
+
+- know the root cause
+- collect needed NPD events & logs
+- and there is the lack support of observability.
+-->
 
 ---
 class: py-10
@@ -831,6 +907,24 @@ clicks: 5
 
 </div>
 
+<!--
+Things didn't stop there. There is actually more.
+
+Remember how the node (or pod) went wrong? When we recovering the training job, simply restart them and have pods scheduled to another health node isn't sufficient.
+
+[click] Checkpoint files must be transferred too!
+
+However...
+
+[click] Checkpoints are large. For example, Llama 2 has roughly 83GB of checkpoint files.
+
+[click] The Limited bandwidth of NFS, shared Volumes, RDMA. Saving 80G and above levels checkpoint files require high speed of IO to reduce the downtime.
+
+[click] Mitigation requires transferring across nodes. If one of the GPU node went down, hundreds GB of files must be transferred to another node.
+
+With that words, we could say: IO, and storage are other challenges we need to face.
+-->
+
 ---
 class: py-10
 clicks: 2
@@ -838,7 +932,7 @@ clicks: 2
 
 # Tune the factors
 
-<span>Checkpoints, weights are more even critical</span>
+<span>Mathematically...</span>
 
 <div mt-12 v-click="2">
 
@@ -877,6 +971,18 @@ G & = \text{Number of GPUs} \\
 $$
 
 </div>
+
+<!--
+Let's sum it up much more "theoretical" and "mathematical".
+
+[click] We break it down into these factors to calculate how much time it would take to train a model.
+
+[click] with them, the formula forms.
+
+There is factors about number of nodes, number of pods, how long can we detect and finish the diagnosis, perform the mitigation?
+
+I know this is hard to understand in a glance, let's simplify it.
+-->
 
 ---
 class: py-10
@@ -940,6 +1046,18 @@ class: py-10
 
 </div>
 
+<!--
+In a nut shell, there are three major factors that we can improve:
+
+[click] Reduce diagnostic time
+
+[click] Reduce reconcile time
+
+[click] Speed up checkpoints
+
+Eventually, we can reduce the total training time cost.
+-->
+
 ---
 class: py-10
 ---
@@ -981,6 +1099,18 @@ They managed to automate most things...
 [^1]: [The Technology Behind BLOOM Training](https://huggingface.co/blog/bloom-megatron-deepspeed)
 [^2]: [Training chronicles](https://github.com/bigscience-workshop/bigscience/blob/master/train/tr11-176B-ml/chronicles.md)
 
+<!--
+We that said, we've understood the issues. Let's take a look at some of the state of the art blogs, tryouts, and researches.
+
+The first one is from BigScience.
+
+[click] They encountered [click] hardware issues, where the frequency of [click] GPU failures was 1-2 a week. Each time a GPU failed, [click] they will lose one and a half hour by just recovering it.
+
+[click] They described the [click] same issue I showed you before in the simulation failure section. Sometimes the training gets stuck despite a crashing process and it won't quit.
+
+[click] Fortunately, [click] they finally managed to automate most things! Yeeey!
+-->
+
 ---
 class: py-10
 ---
@@ -1021,6 +1151,18 @@ After improvements...
 </div>
 
 [^1]: [Introducing Meta Llama 3: The most capable openly available LLM to date](https://ai.meta.com/blog/meta-llama-3/)
+
+<!--
+Ok, what about Meta? They trained Llama 3 405B model on a massive 24,000 GPU cluster.
+
+Surely!
+
+[click] They developed an advanced new training stack that automates [click] error detection, [click] handling, and [click] maintenance to maximize GPU uptime.
+
+[click] They managed to detect [click] silent data corruption, and developed new system to [click] speed up the checkpointing and rollback.
+
+[click] The improvements is huge, they managed to [click] reduce the training time by more than 95%, and [click] increased the efficiency by ~three times by comparing to Llama 2.
+-->
 
 ---
 class: py-10
@@ -1103,6 +1245,23 @@ glow: right
 
 </div>
 
+<!--
+Who else have tried to solve the issues? Clearly everyone understand the challenges now. There are two projects we found that solved the problems from two different perspectives.
+
+[click] One of it, is JobSet, [click] a Kubernetes SIG project. It's easily to extend, however, it
+
+- cannot handle events from pods
+- and log analysis
+- and cannot perform periodic inspection.
+
+[click] DLRover, [click] a trainer-oriented project. It's PyTorch native, ready to use out of box, however, it
+
+- cannot perform periodic inspection
+- and not extensible to various of frameworks & scenarios since it's built for PyTorch, as a extended trainer.
+
+There are some of the [click] arxiv papers that you can read to understand more about the [click] researches. I've put them here for your reference.
+-->
+
 ---
 class: flex justify-center items-center gap-20 px40 text-xl
 ---
@@ -1133,7 +1292,8 @@ class: flex justify-center items-center gap-20 px40 text-xl
 </div>
 
 <!--
-Since we have spent our time on layering concepts and knowledges, let's see what we have done so far.
+
+Since we have spent our time on layering concepts and knowledges, let's see what we have done so far. Here's Kebe to tell you more.
 
 [click] Introducing Kcover.
 
@@ -1233,6 +1393,20 @@ glowSeed: 230
 
 </div>
 
+<!--
+Let’s dive into the core features of kcover.
+
+[click] Firstly, there is the “Firewatch of Workloads.” This feature will continuously monitor the status of training job workloads, such as PyTorchJobs, and promptly detect any error messages.
+
+[click] Next, “Enhanced Observability” will be implemented by utilizing various means to determine the status of jobs, such as observing logs and real-time system calls, thus enhancing the observability of training jobs.
+
+[click] Through “Periodic Inspection,” we will regularly test the status of jobs, the environment, or infrastructure to ensure that the resources committed to training jobs meet the required conditions, ensuring smooth training progress.
+
+[click] With “Cascading Shutdown,” when a fault occurs that prevents the training job from continuing, the entire job will be restarted through Cascading Shutdown. This prevents the training framework from waiting due to a non-working part, thus avoiding the waste of valuable hardware resources.
+
+[click] Finally, “Intelli-Migration” will intelligently assess the health status of nodes to determine whether they can continue running jobs, ensuring maximized resource utilization while safeguarding training efficiency.
+-->
+
 ---
 class: py-10
 ---
@@ -1290,6 +1464,14 @@ class: py-10
 
 </div>
 
+<!--
+The architecture of Kcover consists of two parts: Collector and Controller (also known as Recovery Manager).
+
+The Collector runs as a Daemonset on each Node, responsible for gathering information. This includes executing the dcgmi command, analyzing the logs and events of each Pod, and invoking some system calls, such as checking the status of PCIE devices, to determine the operational status of jobs. It reports any exceptional events back to the APIServer.
+
+The Controller keeps an eye on events relayed by the APIServer and further analyzes the data gathered by the Collector. Based on this analysis, it decides if a Job needs to be restarted. If a restart is  necessary, the Controller will reboot the entire Job and may also mark the node as unschedulable to prevent further assignments.
+-->
+
 ---
 class: py-10
 glow: right
@@ -1317,6 +1499,13 @@ glowSeed: 230
 
 </v-clicks>
 
+<!--
+[click] Once a training job is labeled, kcover will continuously analyze this information.
+This includes [click] node status, [click] container logs (such as CUDA, NCCL, or OOM errors, [click] as well as specific exit codes).
+[click] If a problem is detected,
+[click] we will record the event through the Collector [click] and may initiate a Cascading Shutdown to restart the job, allowing it to resume training from the last known state. [click] Additionally, through ongoing diagnostic tools, we will analyze [click] network status, [click] GPU hardware status, [click] PCIE status, and [click] kernel status to ensure that the system always operates at optimal conditions.
+-->
+
 ---
 class: py-10
 ---
@@ -1327,7 +1516,7 @@ class: py-10
 
 #### Install
 
-```shell
+```shell {|3}
 helm repo add baizeai https://baizeai.github.io/charts
 helm repo update baizeai
 helm -n kcover-system --create-namespace install kcover baizeai/kcover
@@ -1363,6 +1552,16 @@ metadata:
 
 </div>
 
+<!--
+To start using kcover, you can initially install kcover onto your system with a few simple helm commands.
+
+[click] You only need to execute the helm install command to install kcover on your cluster.
+
+[click] Subsequently, when submitting training jobs, such as a PyTorchJob, you only need to set a label for the job.
+
+[click] This allows kcover to continuously monitor the job, ensuring that it can be quickly recovered after a failure without the need for manual intervention.
+-->
+
 ---
 class: py-10
 ---
@@ -1371,9 +1570,9 @@ class: py-10
 
 <span>Foresight from our perspective</span>
 
-<div flex gap-4>
+<div flex gap-4 mt-8>
 
-<div border="2 solid blue-600" bg="blue-800/40" rounded-lg min-h-70 w="[33%]">
+<div v-click border="2 solid blue-600" bg="blue-800/40" rounded-lg min-h-70 w="[33%]">
 
 <div rounded-t-lg bg="blue-800" px-4 py-3>More advanced event analysis</div>
 
@@ -1390,7 +1589,7 @@ class: py-10
 
 </div>
 
-<div border="2 solid indigo-600" bg="indigo-800/40" rounded-lg min-h-70 w="[33%]">
+<div v-click border="2 solid indigo-600" bg="indigo-800/40" rounded-lg min-h-70 w="[33%]">
 
 <div rounded-t-lg bg="indigo-800" px-4 py-3>More types of analysis</div>
 
@@ -1404,7 +1603,7 @@ class: py-10
 
 </div>
 
-<div border="2 solid purple-600" bg="purple-800/40" rounded-lg min-h-70 w="[33%]">
+<div v-click border="2 solid purple-600" bg="purple-800/40" rounded-lg min-h-70 w="[33%]">
 
 <div rounded-t-lg bg="purple-800" px-4 py-3>More integrated solutions</div>
 
@@ -1421,6 +1620,12 @@ class: py-10
 </div>
 
 </div>
+
+<!--
+There is stil much work to be done!
+
+For example, having [click] more event analysis, with `dcgmi`, `nvidia-smi`, `nccl-test`, etc. Even extending the support to Jax? The new de facto machine learning framework by Google. [click] or more types of analysis, and [click] more integrated solutions.
+-->
 
 ---
 class: py-10
@@ -1453,6 +1658,14 @@ class: py-10
   </div>
 </div>
 
+<!--
+The above discusses some of the current features and technical details of Kcover.
+
+Glad, [click] this project is now already open sourced, and you can find it at here, with the QR code on the screen.
+
+We warmly welcome everyone to help us; suggestions or feedback are greatly appreciated.
+-->
+
 ---
 class: py-10
 ---
@@ -1460,6 +1673,8 @@ class: py-10
 # To community
 
 <span>Let's improve it together</span>
+
+<v-clicks>
 
 - Propose universal trainer health check implementation for <span text="[#f6432f]"><div inline-block mr-1 translate-y-0.8 i-devicon:pytorch />PyTorch</span>
 - Together to build better analysis and root cause debugging on top of <div i-devicon:kubernetes inline-block translate-y-0.5 /> <span text="[#5791f7]">Kubernetes</span>
@@ -1469,6 +1684,8 @@ class: py-10
   - <span text="[#f97248]"><div inline-block mr-1 translate-y-0.8 i-devicon:prometheus />Prometheus</span> & <span text="[#667fe3]"><div inline-block mr-1 translate-y-0.8 i-logos:opentelemetry-icon />OpenTelemetry</span> integrations
 - How about implement a stateless negotiator layer on top of <span text="[#ff6f00]"><div inline-block mr-1 translate-y-0.8 i-devicon:tensorflow />TensorFlow</span>, <span text="[#f6432f]"><div inline-block mr-1 translate-y-0.8 i-devicon:pytorch />PyTorch</span> and <span text="[#5e98f6]"><img inline-block mr-1 src="/jax.png" h-3.5 />Jax</span>?
 
+</v-clicks>
+
 <div w-full absolute bottom-0 left-0 flex items-center transform="translate-x--10 translate-y--10">
   <div w-full flex items-center justify-end gap-4>
     <img src="/KubeCon.png" h-10>
@@ -1477,6 +1694,17 @@ class: py-10
     <img src="/AI_dev.png" h-4>
   </div>
 </div>
+
+<!--
+We couldn't make it without any of the communties. We wanted to shout out to the community for the following improvements to discuss with.
+
+This is the list of it.
+
+- [click] We want to propose to have a universal trainer health check implementation for PyTorch, as well as other frameowrks, trainers.
+- [click] Maybe, we could together to build better analysis and root cause debugging on top of Kubernetes.
+- [click] And even, ask for frameworks to try to expose more observability metrics for tracing, logging, and monitoring. Instead of just tensorboard. For example, with Prometheus metrics and OpenTelemetry.
+- [click] Finally, how about implementing a stateless negotiator layer on top of TensorFlow, PyTorch, and Jax? So we can extend it like Kubernetes scheduler plugin.
+-->
 
 ---
 class: py-10
@@ -1496,6 +1724,9 @@ class: py-10
     <div>
       Slides built on top of <a href="https://sli.dev"><div inline-block mr-1 translate-y-0.8 i-logos:slidev />sli.dev</a>
     </div>
+    <div self-end mt-16 translate-x-6>
+      <img src="/public/slide_qr.png" w-50 />
+    </div>
   </div>
 </div>
 
@@ -1507,3 +1738,13 @@ class: py-10
     <img src="/AI_dev.png" h-4>
   </div>
 </div>
+
+<!--
+With all of that, that's the end of today's session.
+
+I bet many of you may asking for how to make this PPT, we open sourced it, it built with codes.
+
+We would like to ask you to give us some thumb ups on sched.
+
+Any questions?
+-->
