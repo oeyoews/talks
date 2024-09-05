@@ -154,6 +154,8 @@ importers:
 
   packages/2024-08-23-kubecon-hk: {}
 
+  packages/2024-09-01-demo-inn: {}
+
   packages/deep-dive-llm-understand-attention-heads-share: {}
 
   packages/deep-dive-llm-understand-attention-heads-share/theme:
