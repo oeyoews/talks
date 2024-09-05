@@ -1,0 +1,11 @@
+{
+  "name": "2024-08-23-kubecon-hk",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "build-base": "slidev build --base /nekoayaka/2024-08-23-kubecon-hk/",
+    "dev": "slidev  --open --remote",
+    "export": "slidev export --with-clicks --per-slide --wait-until none"
+  }
+}
