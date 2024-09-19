@@ -150,45 +150,45 @@ importers:
         specifier: ^3.4.37
         version: 3.4.37(typescript@5.5.4)
 
+  packages/2023-12-21-deep-dive-llm-unleash-the-potentials-of-llm-share: {}
+
+  packages/2023-12-21-deep-dive-llm-unleash-the-potentials-of-llm-share/theme:
+    dependencies:
+      '@slidev/types':
+        specifier: ^0.22.7
+        version: 0.22.7
+      codemirror-theme-vars:
+        specifier: ^0.1.2
+        version: 0.1.2
+      prism-theme-vars:
+        specifier: ^0.2.5
+        version: 0.2.5
+      theme-vitesse:
+        specifier: ^0.1.14
+        version: 0.1.14
+
+  packages/2024-04-18-deep-dive-llm-understand-attention-heads-share: {}
+
+  packages/2024-04-18-deep-dive-llm-understand-attention-heads-share/theme:
+    dependencies:
+      '@slidev/types':
+        specifier: ^0.22.7
+        version: 0.22.7
+      codemirror-theme-vars:
+        specifier: ^0.1.2
+        version: 0.1.2
+      prism-theme-vars:
+        specifier: ^0.2.5
+        version: 0.2.5
+      theme-vitesse:
+        specifier: ^0.1.14
+        version: 0.1.14
+
   packages/2024-08-21-kubecon-hk: {}
 
   packages/2024-08-23-kubecon-hk: {}
 
   packages/2024-09-01-demo-inn: {}
-
-  packages/deep-dive-llm-understand-attention-heads-share: {}
-
-  packages/deep-dive-llm-understand-attention-heads-share/theme:
-    dependencies:
-      '@slidev/types':
-        specifier: ^0.22.7
-        version: 0.22.7
-      codemirror-theme-vars:
-        specifier: ^0.1.2
-        version: 0.1.2
-      prism-theme-vars:
-        specifier: ^0.2.5
-        version: 0.2.5
-      theme-vitesse:
-        specifier: ^0.1.14
-        version: 0.1.14
-
-  packages/deep-dive-llm-unleash-the-potentials-of-llm-share: {}
-
-  packages/deep-dive-llm-unleash-the-potentials-of-llm-share/theme:
-    dependencies:
-      '@slidev/types':
-        specifier: ^0.22.7
-        version: 0.22.7
-      codemirror-theme-vars:
-        specifier: ^0.1.2
-        version: 0.1.2
-      prism-theme-vars:
-        specifier: ^0.2.5
-        version: 0.2.5
-      theme-vitesse:
-        specifier: ^0.1.14
-        version: 0.1.14
 
   packages/talks: {}
 

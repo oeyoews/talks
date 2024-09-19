@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
-import { clicks } from '@slidev/client/logic/nav.ts'
+import { onSlideEnter, onSlideLeave, useDarkMode, useIsSlideActive, useNav, useSlideContext } from '@slidev/client'
+
+const { clicks } = useNav()
 
 const timer = ref()
 const cursorOn = ref(0)
