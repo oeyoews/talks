@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "slidev build",
-    "build-base": "slidev build --out ../../dist/nekoayaka/2024-04-18-deep-dive-llm-understand-attention-heads-share --base /talks/nekoayaka/2024-04-18-deep-dive-llm-understand-attention-heads-share/",
+    "build-base": "slidev build --out ../../dist/nekoayaka/2024-04-18-deep-dive-llm-understand-attention-heads-share --base /nekoayaka/2024-04-18-deep-dive-llm-understand-attention-heads-share/",
     "dev": "slidev --open",
     "export": "slidev export --with-clicks"
   }

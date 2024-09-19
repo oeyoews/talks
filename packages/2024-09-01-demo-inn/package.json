@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "slidev build",
-    "build-base": "slidev build --out ../../dist/nekoayaka/2024-09-01-demo-inn-sh --base /talks/nekoayaka/2024-09-01-demo-inn-sh/",
+    "build-base": "slidev build --out ../../dist/nekoayaka/2024-09-01-demo-inn-sh --base /nekoayaka/2024-09-01-demo-inn-sh/",
     "dev": "slidev  --open --remote",
     "export": "slidev export --with-clicks --per-slide --wait-until none"
   }
