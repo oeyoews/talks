@@ -11,6 +11,11 @@ to = "/.well-known/:splat"
 status = 200
 
 [[redirects]]
-from = "/*"
-to = "/index.html"
+from = "/"
+to = "https://talks.ayaka.io/nekoayaka/2024-04-18-deep-dive-llm-understand-attention-heads-share/"
+status = 301
+
+[[redirects]]
+from = "/nekoayaka/2024-04-18-deep-dive-llm-understand-attention-heads-share/*"
+to = "/nekoayaka/2024-04-18-deep-dive-llm-understand-attention-heads-share/index.html"
 status = 200
