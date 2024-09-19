@@ -18,7 +18,7 @@
       ]"
     >
       <video h-full w-full object-contain controls>
-        <source src="/注意力头组.mov" type="video/mp4">
+        <source src="/注意力头组.mp4" type="video/mp4">
       </video>
     </div>
   </div>

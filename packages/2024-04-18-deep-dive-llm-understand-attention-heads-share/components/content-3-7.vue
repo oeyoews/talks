@@ -18,7 +18,7 @@
       ]"
     >
       <video h-full w-full object-contain controls>
-        <source src="/损失计算.mov" type="video/mp4">
+        <source src="/损失计算.mp4" type="video/mp4">
       </video>
     </div>
   </div>
