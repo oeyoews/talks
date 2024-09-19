@@ -1,4 +1,4 @@
-name: Deploy pages
+name: Deploy Cloudflare Pages
 
 on:
   workflow_dispatch:
@@ -51,21 +51,10 @@ jobs:
       - name: Build
         run: pnpm run packages:build-base
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - uses: actions/upload-pages-artifact@v3
+      - name: Deploy
+        uses: cloudflare/pages-action@v1
         with:
-          path: dist
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
-    name: Deploy
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: talks-nekomeowww
+          directory: dist
