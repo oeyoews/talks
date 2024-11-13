@@ -11,6 +11,7 @@ layout: cover
 preload: false
 clicks: 0
 routerMode: hash
+class: bg-[#000]
 ---
 
 <h1 class="text-left font-semibold text-4xl">
@@ -86,6 +87,7 @@ clicks: 1
 layout: page
 background: /backgrounds/3.png
 preload: false
+class: bg-white
 ---
 
 <Content-1-2 />
@@ -104,6 +106,7 @@ clicks: 1
 layout: page
 background: /backgrounds/3.png
 preload: false
+class: bg-white
 ---
 
 <Content-1-3 />
@@ -124,6 +127,7 @@ clicks: 1
 layout: page
 background: /backgrounds/3.png
 preload: false
+class: bg-white
 ---
 
 <Content-1-4 />
@@ -140,6 +144,7 @@ clicks: 1
 layout: page
 background: /backgrounds/3.png
 preload: false
+class: bg-white
 ---
 
 <Content-1-5 />
@@ -159,6 +164,7 @@ sectionNumber: 2
 sectionTitle: 随机鹦鹉
 background: /backgrounds/2.png
 preload: false
+class: bg-[#000]
 ---
 
 <!--
@@ -173,6 +179,7 @@ clicks: 1
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-2-2 />
@@ -193,6 +200,7 @@ clicks: 1
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-2-3 />
@@ -217,6 +225,7 @@ clicks: 1
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-2-4 />
@@ -239,6 +248,7 @@ clicks: 2
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-2-5 />
@@ -259,6 +269,7 @@ clicks: 2
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-2-6 />
@@ -277,6 +288,7 @@ clicks: 4
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-2-7 />
@@ -293,6 +305,7 @@ clicks: 1
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-2-8 />
@@ -311,6 +324,7 @@ clicks: 1
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-2-9 />
@@ -327,6 +341,7 @@ clicks: 3
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-2-10 />
@@ -349,6 +364,7 @@ clicks: 2
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-2-11 />
@@ -363,6 +379,7 @@ clicks: 2
 layout: page
 background: /backgrounds/3.png
 preload: false
+class: bg-white
 ---
 
 <Content-2-12 />
@@ -381,6 +398,7 @@ clicks: 2
 layout: page
 background: /backgrounds/3.png
 preload: false
+class: bg-white
 ---
 
 <Content-2-13 />
@@ -400,6 +418,7 @@ clicks: 3
 layout: page
 background: /backgrounds/3.png
 preload: false
+class: bg-white
 ---
 
 <Content-2-14 />
@@ -426,6 +445,7 @@ clicks: 2
 layout: page
 background: /backgrounds/3.png
 preload: false
+class: bg-white
 ---
 
 <Content-2-15 />
@@ -444,6 +464,7 @@ clicks: 6
 layout: page
 background: /backgrounds/3.png
 preload: false
+class: bg-white
 ---
 
 <Content-2-16 />
@@ -462,6 +483,7 @@ clicks: 6
 layout: page
 background: /backgrounds/3.png
 preload: false
+class: bg-white
 ---
 
 <Content-2-17 />
@@ -484,6 +506,7 @@ clicks: 4
 layout: page
 background: /backgrounds/3.png
 preload: false
+class: bg-white
 ---
 
 <Content-2-18 />
@@ -500,6 +523,7 @@ clicks: 2
 layout: page
 background: /backgrounds/3.png
 preload: false
+class: bg-white
 ---
 
 <Content-2-19 />
@@ -518,6 +542,7 @@ clicks: 17
 layout: page
 background: /backgrounds/3.png
 preload: false
+class: bg-white
 ---
 
 <Content-2-20 />
@@ -532,6 +557,7 @@ clicks: 3
 layout: page
 background: /backgrounds/3.png
 preload: false
+class: bg-white
 ---
 
 <Content-2-24 />
@@ -550,6 +576,7 @@ clicks: 2
 layout: page
 background: /backgrounds/3.png
 preload: false
+class: bg-white
 ---
 
 <Content-2-25 />
@@ -572,6 +599,7 @@ clicks: 1
 layout: page
 background: /backgrounds/3.png
 preload: false
+class: bg-white
 ---
 
 <Content-2-26 />
@@ -586,6 +614,7 @@ clicks: 3
 layout: page
 background: /backgrounds/3.png
 preload: false
+class: bg-white
 ---
 
 <Content-2-27 />
@@ -600,6 +629,7 @@ clicks: 3
 layout: page
 background: /backgrounds/3.png
 preload: false
+class: bg-white
 ---
 
 <Content-2-28 />
@@ -614,6 +644,7 @@ clicks: 1
 layout: page
 background: /backgrounds/3.png
 preload: false
+class: bg-white
 ---
 
 <Content-2-29 />
@@ -628,6 +659,7 @@ clicks: 5
 layout: page
 background: /backgrounds/3.png
 preload: false
+class: bg-white
 ---
 
 <Content-2-30 />
@@ -643,6 +675,7 @@ sectionNumber: 3
 sectionTitle: 原初智能
 background: /backgrounds/2.png
 preload: false
+class: bg-[#000]
 ---
 
 <!--
@@ -655,6 +688,7 @@ clicks: 1
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-3-1 />
@@ -669,6 +703,7 @@ clicks: 3
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-3-2 />
@@ -685,6 +720,7 @@ clicks: 1
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-3-9 />
@@ -699,6 +735,7 @@ clicks: 2
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-3-10 />
@@ -713,6 +750,7 @@ clicks: 2
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-3-11 />
@@ -727,6 +765,7 @@ clicks: 2
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-3-18 />
@@ -741,6 +780,7 @@ clicks: 6
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-3-19 />
@@ -755,6 +795,7 @@ clicks: 5
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-3-20 />
@@ -769,6 +810,7 @@ clicks: 1
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-3-21 />
@@ -783,6 +825,7 @@ clicks: 2
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-3-22 />
@@ -799,6 +842,7 @@ clicks: 2
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-3-23 />
@@ -820,6 +864,7 @@ clicks: 2
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-3-24 />
@@ -836,6 +881,7 @@ clicks: 2
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-3-25 />
@@ -850,6 +896,7 @@ clicks: 2
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-3-26 />
@@ -864,6 +911,7 @@ clicks: 2
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-3-27 />
@@ -878,6 +926,7 @@ clicks: 2
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-3-28 />
@@ -893,6 +942,7 @@ sectionNumber: 4
 sectionTitle: 我们并无二致
 background: /backgrounds/2.png
 preload: false
+class: bg-[#000]
 ---
 
 <!--
@@ -905,6 +955,7 @@ clicks: 2
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-4-1 />
@@ -919,6 +970,7 @@ clicks: 9
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-4-2 />
@@ -933,6 +985,7 @@ clicks: 2
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-4-3 />
@@ -947,6 +1000,7 @@ clicks: 2
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-4-4 />
@@ -961,6 +1015,7 @@ clicks: 2
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-4-5 />
@@ -975,6 +1030,7 @@ clicks: 2
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-4-6 />
@@ -989,6 +1045,7 @@ clicks: 2
 layout: page
 background: /backgrounds/1.png
 preload: false
+class: bg-[#000]
 ---
 
 <Content-4-7 />
@@ -1012,6 +1069,7 @@ sectionNumber: 5
 sectionTitle: Now What？
 background: /backgrounds/2.png
 preload: false
+class: bg-[#000]
 ---
 
 <!--
@@ -1032,4 +1090,5 @@ title: Thanks
 layout: end
 background: /backgrounds/ending.png
 preload: false
+class: bg-[#000]
 ---

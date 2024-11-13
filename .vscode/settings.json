@@ -11,8 +11,10 @@
     "Playwrite",
     "seedrandom",
     "seriph",
+    "Shiki",
     "slidev",
     "unocss",
+    "vitesse",
     "vueuse"
   ],
   "prettier.enable": false,
