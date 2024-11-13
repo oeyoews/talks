@@ -1,10 +1,10 @@
 {
-  "name": "2024-08-23-kubecon-hk",
+  "name": "2024-11-14-deep-dive-llm-era-of-post-training",
   "type": "module",
   "private": true,
   "scripts": {
     "build": "slidev build",
-    "build-base": "slidev build --out ../../dist/nekoayaka/2024-08-23-kubecon-hk --base /nekoayaka/2024-08-23-kubecon-hk/",
+    "build-base": "slidev build --out ../../dist/nekoayaka/2024-11-14-deep-dive-llm-era-of-post-training --base /nekoayaka/2024-11-14-deep-dive-llm-era-of-post-training/",
     "dev": "slidev  --open --remote",
     "export": "slidev export --with-clicks --per-slide --wait-until none"
   },
