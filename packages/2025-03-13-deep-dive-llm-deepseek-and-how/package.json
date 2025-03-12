@@ -1,0 +1,16 @@
+{
+  "name": "2025-03-13-deep-dive-llm-deepseek-and-how",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "build-base": "slidev build --out ../../dist/nekoayaka/2024-11-14-deep-dive-llm-era-of-post-training --base /nekoayaka/2024-11-14-deep-dive-llm-era-of-post-training/",
+    "dev": "slidev  --open --remote",
+    "export": "slidev export --with-clicks --per-slide --wait-until none"
+  },
+  "devDependencies": {
+    "@iconify-json/logos": "^1.2.4",
+    "@iconify/utils": "^2.3.0",
+    "@proj-airi/lobe-icons": "^0.3.6"
+  }
+}
