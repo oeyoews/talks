@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "slidev build",
-    "build-base": "slidev build --out ../../dist/nekoayaka/2024-11-14-deep-dive-llm-era-of-post-training --base /nekoayaka/2024-11-14-deep-dive-llm-era-of-post-training/",
+    "build-base": "slidev build --out ../../dist/2025-03-13-deep-dive-llm-deepseek-and-how --base /2025-03-13-deep-dive-llm-deepseek-and-how/",
     "dev": "slidev  --open --remote",
     "export": "slidev export --with-clicks --per-slide --wait-until none"
   },

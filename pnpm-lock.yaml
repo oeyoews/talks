@@ -196,6 +196,18 @@ importers:
         specifier: ^1.2.4
         version: 1.2.4
 
+  packages/2025-03-13-deep-dive-llm-deepseek-and-how:
+    devDependencies:
+      '@iconify-json/logos':
+        specifier: ^1.2.4
+        version: 1.2.4
+      '@iconify/utils':
+        specifier: ^2.3.0
+        version: 2.3.0
+      '@proj-airi/lobe-icons':
+        specifier: ^0.3.6
+        version: 0.3.6
+
   packages/talks: {}
 
 packages:
@@ -1191,6 +1203,9 @@ packages:
 
   '@polka/url@1.0.0-next.24':
     resolution: {integrity: sha512-2LuNTFBIO0m7kKIQvvPHN6UE63VjpmL9rnEEaOOaiSPbZK+zUOYIzBAWcED+3XYzhYsd/0mD57VdxAEqqV52CQ==}
+
+  '@proj-airi/lobe-icons@0.3.6':
+    resolution: {integrity: sha512-fOCpzksIEDr2GrzAQ+RlhYtrFm3PM4jjlp815tTW4lxxIT4CQt5F8vPn60aCpEns4gAMUC8A+YKxFInWYY/Mmw==}
 
   '@rollup/pluginutils@5.1.0':
     resolution: {integrity: sha512-XTIWOPPcpvyKI6L1NHo0lFlCyznUEyPmPY1mc3KpPVDYulHSTvyeLNVW00QTLIAFNhR3kYnJTQHeGqU4M3n09g==}
@@ -6113,6 +6128,8 @@ snapshots:
   '@pkgr/core@0.1.1': {}
 
   '@polka/url@1.0.0-next.24': {}
+
+  '@proj-airi/lobe-icons@0.3.6': {}
 
   '@rollup/pluginutils@5.1.0(rollup@4.35.0)':
     dependencies:
