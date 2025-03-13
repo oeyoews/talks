@@ -526,6 +526,121 @@ DeepSeek 最革命性的地方就是它的纯强化学习方法：
 
 ---
 class: py-10
+glow: bottom
+glowSeed: 300
+---
+
+# 强化学习：R1-Zero 的秘密武器
+
+<div grid="~ cols-2" gap-4 mt-5>
+  <div
+    v-click="1"
+    transition duration-500 ease-in-out
+    :class="$clicks < 1 ? 'opacity-0 translate-y-10' : 'opacity-100 translate-y-0'"
+  >
+    <div text-lg font-bold mb-2 flex items-center>
+      <div i-carbon:machine-learning text-blue-400 mr-2 />强化学习基础
+    </div>
+    <div class="border border-blue-500/30 rounded-lg p-2 bg-blue-900/20 mb-4">
+      <div text-sm flex items-start mb-2>
+        <div i-carbon:dot-mark mr-1 mt-0.5 text-blue-400 />
+        <div>智能体通过<span text-blue-300 font-bold>与环境交互</span>来学习最优策略</div>
+      </div>
+      <div text-sm flex items-start mb-2>
+        <div i-carbon:dot-mark mr-1 mt-0.5 text-blue-400 />
+        <div>通过<span text-blue-300 font-bold>奖励信号</span>获得关于行为质量的反馈</div>
+      </div>
+      <div text-sm flex items-start>
+        <div i-carbon:dot-mark mr-1 mt-0.5 text-blue-400 />
+        <div>目标是最大化<span text-blue-300 font-bold>长期累积奖励</span></div>
+      </div>
+    </div>
+    <div
+      v-click="3"
+      transition duration-500 ease-in-out
+      :class="$clicks < 3 ? 'opacity-0 scale-95' : 'opacity-100 scale-100'"
+      class="border border-purple-500/30 rounded-lg p-2 bg-purple-900/20"
+    >
+      <div text-sm font-bold mb-2 text-purple-300>传统 LLM 训练的局限性</div>
+      <div text-sm flex items-start mb-2>
+        <div i-carbon:warning-alt mr-1 mt-0.5 text-yellow-400 />
+        <div>需要大量<span text-yellow-300 font-bold>人工标注数据</span></div>
+      </div>
+      <div text-sm flex items-start mb-2>
+        <div i-carbon:warning-alt mr-1 mt-0.5 text-yellow-400 />
+        <div>微调过程可能<span text-yellow-300 font-bold>限制创新思维模式</span></div>
+      </div>
+      <div text-sm flex items-start>
+        <div i-carbon:warning-alt mr-1 mt-0.5 text-yellow-400 />
+        <div>标准 RLHF 可能导致<span text-yellow-300 font-bold>过度校准</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div
+      v-click="2"
+      transition duration-500 ease-in-out
+      :class="$clicks < 2 ? 'opacity-0 translate-y-10' : 'opacity-100 translate-y-0'"
+    >
+      <div text-lg font-bold mb-4 flex items-center>
+        <div i-carbon:machine-learning-model text-green-400 mr-2 />DeepSeek 的 RL 创新
+      </div>
+      <img src="/r1-equation.png" class="border border-gray-700 rounded-lg mb-2" w-full h-30 object-cover>
+      <div
+        v-click="4"
+        transition duration-500 ease-in-out
+        :class="$clicks < 4 ? 'opacity-0 scale-95' : 'opacity-100 scale-100'"
+        class="border border-green-500/30 rounded-lg p-2 bg-green-900/20"
+      >
+        <div text-sm font-bold mb-2 text-green-300>GRPO: 组相对策略优化</div>
+        <div text-sm flex items-start mb-2>
+          <div i-carbon:checkmark-filled mr-1 mt-0.5 text-green-400 />
+          <div>按批处理<span text-green-300 font-bold>组内对比</span>，而非全局对比</div>
+        </div>
+        <div text-sm flex items-start mb-2>
+          <div i-carbon:checkmark-filled mr-1 mt-0.5 text-green-400 />
+          <div>使用简单的<span text-green-300 font-bold>基于规则奖励</span>函数</div>
+        </div>
+        <div text-sm flex items-start>
+          <div i-carbon:checkmark-filled mr-1 mt-0.5 text-green-400 />
+          <div>允许探索<span text-green-300 font-bold>多种解决方案路径</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  v-click="5"
+  class="mt-5 border border-blue-500/30 rounded-lg p-4 bg-blue-900/20"
+  transition duration-500 ease-in-out
+  :class="$clicks < 5 ? 'opacity-0 scale-95' : 'opacity-100 scale-100'"
+>
+  <div text-sm font-bold mb-2 text-blue-300 flex items-center>
+    <div i-carbon:idea text-yellow-400 mr-2 />R1-Zero 的强化学习突破
+  </div>
+  <div text-sm>
+    DeepSeek 的突破在于证明了<span font-bold>纯强化学习</span>方法可以产生复杂的推理能力，无需人工监督微调。通过<span font-bold>放宽探索空间</span>并专注于最终结果的正确性，模型发展出了<span font-bold>自我修正</span>和<span font-bold>多步规划</span>的能力，展现出更接近人类思维的灵活性。
+  </div>
+</div>
+
+<!--
+让我们深入了解强化学习——DeepSeek R1-Zero 背后的秘密武器：
+
+[click] 强化学习的核心理念是通过与环境交互来学习。智能体执行动作，获得奖励或惩罚，并通过这种反馈逐渐改进其策略。目标是最大化长期累积奖励，而不仅仅是即时回报。
+
+[click] DeepSeek 的突破在于他们如何应用强化学习于语言模型。在传统的监督学习中，模型会被告知"正确答案"，但在强化学习中，模型可以探索多种路径，只要最终结果正确即可获得奖励。
+
+[click] 传统 LLM 训练方法存在限制：需要大量人工标注数据、可能限制创新思维模式，而标准的基于人类反馈的强化学习(RLHF)可能导致过度校准，使模型避险而非探索最优解决方案。
+
+[click] DeepSeek 采用了组相对策略优化(GRPO)，其中模型在批处理组内进行对比，而非与全局标准比较。他们使用简单的基于规则奖励函数，关注最终答案的正确性，而非中间步骤。这允许模型探索多种解决方案路径，发展出更灵活的推理策略。
+
+[click] 这一突破证明了纯强化学习方法可以产生复杂的推理能力，无需人工监督微调。通过放宽探索空间并专注于最终结果，模型发展出了自我修正和多步规划的能力，展现出更接近人类思维的灵活性。这种方法不仅效率更高，还能产生更具创造性的问题解决方式。
+-->
+
+---
+class: py-10
 ---
 
 # 「啊哈！」时间
