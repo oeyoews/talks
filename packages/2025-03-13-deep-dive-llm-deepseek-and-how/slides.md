@@ -246,7 +246,7 @@ clicks: 6
         flex items-center
       >
         <div i-carbon:money text-green-400 mr-2 />
-        <span>性价比高（R1：$2.19/百万输出 Token）</span>
+        <span>性价比高（R1：¥2.19/百万输出 Token）</span>
       </div>
       <div
         v-click="4"
@@ -364,14 +364,15 @@ class: py-10
             <div i-carbon:star-filled text-yellow-400 mr-2 />DeepSeek-R1
           </div>
           <div text-sm class="mb-4">
-            最终产品：结合纯强化学习能力和人类可读格式
+            多专家 + 推理模型
           </div>
         </div>
         <div class="border border-green-500/30 rounded p-2 bg-green-900/30 text-xs">
           <div mb-1 font-bold text-green-200>两全其美：</div>
+          <div flex items-center mb-1><div i-carbon:dot-mark mr-1 text-green-400 />专家并行</div>
           <div flex items-center mb-1><div i-carbon:dot-mark mr-1 text-green-400 />R1-Zero 的卓越推理能力</div>
-          <div flex items-center mb-1><div i-carbon:dot-mark mr-1 text-green-400 />人类可读的思维过程</div>
-          <div flex items-center><div i-carbon:dot-mark mr-1 text-green-400 />以 1/30 的 API 成本媲美 GPT-4o1</div>
+          <div flex items-center mb-1><div i-carbon:dot-mark mr-1 text-green-400 />清晰的 think 过程 </div>
+          <div flex items-center><div i-carbon:dot-mark mr-1 text-green-400 />以 1/30 的 API 成本媲美 GPT o1</div>
         </div>
       </div>
     </div>
