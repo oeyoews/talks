@@ -208,6 +208,21 @@ importers:
         specifier: ^0.3.6
         version: 0.3.6
 
+  packages/2025-04-13-what-is-mcp-and-how-it-helps:
+    devDependencies:
+      '@iconify-json/logos':
+        specifier: ^1.2.4
+        version: 1.2.4
+      '@iconify-json/simple-icons':
+        specifier: ^1.2.31
+        version: 1.2.31
+      '@iconify/utils':
+        specifier: ^2.3.0
+        version: 2.3.0
+      '@proj-airi/lobe-icons':
+        specifier: ^0.3.6
+        version: 0.3.6
+
   packages/talks: {}
 
 packages:
@@ -1113,6 +1128,9 @@ packages:
 
   '@iconify-json/simple-icons@1.2.28':
     resolution: {integrity: sha512-KoCuXgJ2AysGjzOAMUtNPrXeOvvC3zRR+REbYhei2mx5LGTSSrrlVJdaSBv4f8LH9hgfhG7E4Us3hH3XwreP+A==}
+
+  '@iconify-json/simple-icons@1.2.31':
+    resolution: {integrity: sha512-xBUPtvkcSAiXs9DfVtudhLddQtQYin3I3Ph/W5FNYA0oE6r2hmLB8TgOog9OjOt1Sxn3IB5+4n5+64DMf2xNmQ==}
 
   '@iconify-json/svg-spinners@1.2.2':
     resolution: {integrity: sha512-DIErwfBWWzLfmAG2oQnbUOSqZhDxlXvr8941itMCrxQoMB0Hiv8Ww6Bln/zIgxwjDvSem2dKJtap+yKKwsB/2A==}
@@ -5989,6 +6007,10 @@ snapshots:
       '@iconify/types': 2.0.0
 
   '@iconify-json/simple-icons@1.2.28':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/simple-icons@1.2.31':
     dependencies:
       '@iconify/types': 2.0.0
 
