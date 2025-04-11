@@ -113,14 +113,17 @@ class: py-10
 class: py-10
 ---
 
-# 我们对LLM的期望
+# 我们对 LLM 的期望
+
+<div mt-20 />
 
 <div flex items-center gap-4>
-  <div class="p-4 border border-blue-800/60 rounded-lg bg-blue-800/20 backdrop-blur flex-1">
+  <div class="p-4 backdrop-blur flex-1">
+  <div class="font-bold text-2xl mb-5">期望</div>
     <div class="space-y-4">
       <div class="flex items-center">
-        <div class="i-carbon:data-access text-3xl mr-4 text-blue-400"></div>
-        <div>访问我的专属内容（文件、数据库、私有笔记）</div>
+        <div class="i-carbon:document text-3xl mr-4 text-blue-400"></div>
+        <div>访问私有内容（文件、数据库、私有笔记）</div>
       </div>
       <div class="flex items-center">
         <div class="i-carbon:api text-3xl mr-4 text-blue-400"></div>
@@ -133,8 +136,8 @@ class: py-10
     </div>
   </div>
 
-  <div class="p-4 border border-yellow-800/60 rounded-lg bg-yellow-800/20 backdrop-blur flex-1">
-    <div class="font-bold mb-2">LLM的现实局限</div>
+  <div class="p-4 rounded-lg backdrop-blur flex-1">
+    <div class="font-bold text-2xl mb-5">现实</div>
     <div class="space-y-4 mt-2">
       <div class="flex items-center">
         <div class="i-carbon:warning text-3xl mr-4 text-yellow-500"></div>
@@ -412,8 +415,6 @@ class: py-10
 <div v-click class="mt-6 text-center text-lg">
   MCP提供了一个标准框架，使 LLM 能够<span class="font-bold text-blue-400">超越自身固有局限</span>
 </div>
-
-
 
 <!--
 MCP主要解决了三大问题：首先，它让LLM可以安全访问私有数据，如本地文件和数据库；其次，它能连接外部服务，获取实时信息；最后，它允许LLM调用外部工具进行精确操作。简而言之，MCP提供了一个标准框架，让LLM能够突破自身的固有局限。
