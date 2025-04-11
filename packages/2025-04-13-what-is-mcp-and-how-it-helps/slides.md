@@ -13,7 +13,7 @@ mdc: true
 clicks: 0
 preload: false
 glowSeed: 200
-# routerMode: hash
+routerMode: hash
 ---
 
 <div translate-x--35>
