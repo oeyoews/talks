@@ -1,0 +1,17 @@
+{
+  "name": "2025-04-13-what-is-mcp-and-how-it-helps",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "build-base": "slidev build --out ../../dist/2025-04-13-what-is-mcp-and-how-it-helps --base /2025-04-13-what-is-mcp-and-how-it-helps/",
+    "dev": "slidev  --open --remote",
+    "export": "slidev export --with-clicks --per-slide --wait-until none"
+  },
+  "devDependencies": {
+    "@iconify-json/logos": "^1.2.4",
+    "@iconify-json/simple-icons": "^1.2.31",
+    "@iconify/utils": "^2.3.0",
+    "@proj-airi/lobe-icons": "^0.3.6"
+  }
+}
