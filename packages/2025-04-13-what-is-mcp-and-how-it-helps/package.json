@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "slidev build",
-    "build-base": "slidev build --out ../../dist/2025-04-13-what-is-mcp-and-how-it-helps --base /2025-04-13-what-is-mcp-and-how-it-helps/",
+    "build-base": "slidev build --out ../../dist/2025-04-13-what-is-mcp-and-how-it-helps --base /nekoayaka/2025-04-13-what-is-mcp-and-how-it-helps/",
     "dev": "slidev  --open --remote",
     "export": "slidev export --with-clicks --per-slide --wait-until none"
   },
