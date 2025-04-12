@@ -6,26 +6,26 @@
 
 ## Presented...
 
-|  |  |  |
-| --- | --- | --- |
+|  |  |
+| --- | --- |
 | ![](https://github.com/user-attachments/assets/7dacca02-f6bd-40b6-aa7f-9d409fc7ce42) | 2024.11.14 @ Shanghai |
 | 深入浅出 LLM 4：DeepSeek 为什么这么火？ (🇨🇳) | [Slides](https://talks.ayaka.io/nekoayaka/2025-03-13-deep-dive-llm-deepseek-and-how/) |
-|  |  |  |
+|  |  |
 | ![](https://github.com/user-attachments/assets/e82484ce-58d1-4e9d-a0dd-2c9c616b0da5) | 2024.11.14 @ Shanghai |
 | 深入浅出 LLM 3：训练后范式的开启 (🇨🇳) | [Slides](https://talks.ayaka.io/nekoayaka/2024-11-14-deep-dive-llm-era-of-post-training/) |
-|  |  |  |
+|  |  |
 | ![](https://github.com/user-attachments/assets/ddbe1f6c-e692-4bea-967c-95eda4a2b808) | 2024.09.01 @ Shanghai |
 | Seamless agent toolkit, and unified LLM gateway (🇬🇧) | [Slides](https://talks.ayaka.io/nekoayaka/2024-09-01-demo-inn/) |
-|  |  |  |
+|  |  |
 | ![](https://i.ytimg.com/vi/XWjZQfSXKDg/hq720.jpg) | 2024.08.23 @ Hong Kong |
 | No More Runtime Setup! Let's Bundle, Distribute, Deploy, Scale LLMs Seamlessly with Ollama Operator (🇬🇧) | [Slides](https://talks.ayaka.io/nekoayaka/2024-08-23-kubecon-hk/) |
-|  |  |  |
+|  |  |
 | ![](https://i.ytimg.com/vi/SlRMvDUY7lI/hq720.jpg) | 2024.08.21 @ Hong Kong |
 | Sit Back and Relax with Fault Awareness and Robust Instant Recovery for Large Scale AI Workloads (🇬🇧) | [Slides](https://baizeai.github.io/talks/2024-08-21-kubecon-hk/) |
-|  |  |  |
+|  |  |
 | ![](https://github.com/user-attachments/assets/581582eb-1018-4dfe-8ec6-0a13dd3242ce) | 2024.04.18 @ Shanghai |
 | 深入浅出 LLM 2：理解自注意力机制 (🇨🇳) | [Slides](https://talks.ayaka.io/nekoayaka/2024-04-18-deep-dive-llm-understand-attention-heads-share/) |
-|  |  |  |
+|  |  |
 | ![](https://github.com/user-attachments/assets/c7c9fff1-55b7-4d54-8068-ed1b15f43a43) | 2023.12.21 @ Shanghai |
 | 深入浅出 LLM：大语言模型 (🇨🇳) | [Slides](https://talks.ayaka.io/nekoayaka/2023-12-21-deep-dive-llm-unleash-the-potentials-of-llm-share/) |
-|  |  |  |
+|  |  |
