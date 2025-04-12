@@ -210,6 +210,9 @@ importers:
 
   packages/2025-04-13-what-is-mcp-and-how-it-helps:
     devDependencies:
+      '@iconify-json/devicon':
+        specifier: ^1.2.23
+        version: 1.2.23
       '@iconify-json/logos':
         specifier: ^1.2.4
         version: 1.2.4
@@ -1104,6 +1107,9 @@ packages:
 
   '@iconify-json/devicon@1.2.19':
     resolution: {integrity: sha512-OnVa/bfWB5K2ZeK/fD6VMwuP4PgfHX4jDFoXmHkBBJr13NmaFSpKcMdEXGpvl9u68u4HiMb3A/9PU4hDW6QXvA==}
+
+  '@iconify-json/devicon@1.2.23':
+    resolution: {integrity: sha512-JpDWec56q5FKZINnK6iewDIfZulmNw6K2StlxhTLcBAPGRqX/8/o/W3yx0W9Yy0VYt2rtku6sLMqHoIBiNXB7g==}
 
   '@iconify-json/fluent-emoji@1.2.3':
     resolution: {integrity: sha512-q9oSqx463rVTQbPbVwvpOkeVii+9BifvJcluv5lqs5ybdab4lnVnpQ/uE2zAseFGOWNygKJsXZl6HbgV9HGhZw==}
@@ -5975,6 +5981,10 @@ snapshots:
       '@iconify/types': 2.0.0
 
   '@iconify-json/devicon@1.2.19':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/devicon@1.2.23':
     dependencies:
       '@iconify/types': 2.0.0
 

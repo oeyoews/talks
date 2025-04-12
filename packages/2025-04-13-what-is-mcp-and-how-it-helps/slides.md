@@ -29,13 +29,146 @@ DaoCloud Neko
 <!-- 大家好，今天我将与大家分享Model Context Protocol（MCP）的相关内容，包括它的基本概念、现状、未来机遇以及对我们不同角色的影响。-->
 
 ---
+layout: intro
+class: px-35
+glowSeed: 105
+---
+
+<div flex items-center>
+  <div
+    v-click="1" flex flex-col items-start transition duration-500 ease-in-out min-w-60
+    :class="$clicks < 1 ? 'translate-x--20' : 'translate-x-0'"
+  >
+    <img src="/person/neko.jpeg" w-40 h-40 rounded-full object-cover mb-5>
+    <span font-semibold text-3xl>凡石（Neko）</span>
+    <div>
+      <div>
+        <span class="opacity-70">Senior software engineer</span>
+      </div>
+      <div text-sm flex items-center gap-2 mt-4>
+        <div i-ri:github-fill /><span underline decoration-dashed font-mono decoration-zinc-300>nekomeowww</span>
+      </div>
+    </div>
+  </div>
+  <div flex-1 />
+  <div flex flex-col gap-8>
+    <div mb-4 v-click="2">
+      <div mb-4 text-zinc-400>
+        <span>社区</span>
+      </div>
+      <div
+        flex flex-wrap items-start content-start gap-4 transition duration-500 ease-in-out
+        :class="$clicks < 2 ? 'translate-y-20' : 'translate-y-0'"
+      >
+        <div flex items-center gap-2 text-2xl w-fit h-fit>
+          <div i-devicon:kubernetes inline-block /> Kubernetes
+        </div>
+        <div flex items-center gap-2 text-2xl w-fit h-fit>
+          <div i-devicon:go /><div>Golang</div>
+        </div>
+        <div flex items-center gap-2 text-2xl w-fit h-fit>
+          <div i-logos:vue /><div>Vue</div>
+        </div>
+        <div flex items-center gap-2 text-2xl w-fit h-fit>
+          <div i-twemoji:brain /><div>xsai</div>
+        </div>
+        <div flex items-center gap-2 text-2xl w-fit h-fit>
+          <div i-twemoji:bear /><div>Project AIRI</div>
+        </div>
+        <div flex items-center gap-2 text-2xl w-fit h-fit>
+          <div i-twemoji:parrot /><div>Langchain Go/JavaScript</div>
+        </div>
+      </div>
+    </div>
+    <div v-click="3">
+      <div mb-4 text-zinc-400>
+        <span>其他项目 / 组织</span>
+      </div>
+      <div
+        flex flex-wrap items-start content-start gap-4 transition duration-500 ease-in-out
+        :class="$clicks < 3 ? 'translate-y-20' : 'translate-y-0'"
+      >
+        <div flex items-center gap-2 text-2xl w-fit h-fit>
+          <div i-fluent-emoji:brain /><div>Moeru AI</div>
+        </div>
+        <div flex items-center gap-2 text-2xl w-fit h-fit>
+          <div i-fluent-emoji:notebook-with-decorative-cover /><div>Nolebase</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div v-click="3" w-full absolute bottom-0 left-0 flex items-center transform="translate-x--10 translate-y--10">
+  <div w-full flex items-center justify-end gap-4>
+    <img src="/nekomeoww-qr.png" h-50>
+  </div>
+</div>
+
+<!--
+As background, [click] Me, Fanshi Zhang, a software engineer at DaoCloud, focusing on AI and Kubernetes.
+
+[click] But my story won't simply stop for just Kubernetes, or AI, but also being as the contributor to Golang, Vue.js, Langchain, many other communities.
+
+(By the way, this presentation is written in Vue and TypeScript, so, I am a full stack developer :D).
+
+[click] I am also the co-founder of one of the famously known knowledge management tool Nolebase, served for Obsidian and Logseq. Co-founder of the generative UI devtool called Guii.ai, which I will show you in the demo later.
+-->
+
+---
+title: The previous ones
+glowSeed: 203
+---
+
+<div>
+  <div grid="~ cols-2" gap-4>
+    <div
+      relative
+      class="[&_.qr]:hover:opacity-100 [&_.img]:hover:opacity-50 hover:cursor-pointer hover:grayscale-100"
+      rounded-lg overflow-hidden  bg="black" h-fit
+      transition="all duration-250 ease-in-out"
+    >
+      <img src="/session-1.png" class="img" opacity-100>
+      <img src="/session-1-qr.png" class="qr" w-60 absolute top-0 left="0" translate-x="[40%]" opacity-0 transition="all duration-250 ease-in-out">
+    </div>
+    <div
+      relative
+      class="[&_.qr]:hover:opacity-100 [&_.img]:hover:opacity-50 hover:cursor-pointer hover:grayscale-100"
+      rounded-lg overflow-hidden  bg="black" h-fit
+      transition="all duration-250 ease-in-out"
+    >
+      <img src="/session-2.png" class="img" opacity-100>
+      <img src="/session-2-qr.png" class="qr" w-60 absolute top-0 left="0" translate-x="[40%]" opacity-0 transition="all duration-250 ease-in-out">
+    </div>
+    <div
+      relative
+      class="[&_.qr]:hover:opacity-100 [&_.img]:hover:opacity-50 hover:cursor-pointer hover:grayscale-100"
+      rounded-lg overflow-hidden  bg="black" h-fit
+      transition="all duration-250 ease-in-out"
+    >
+      <img src="/session-3.png" class="img" opacity-100>
+      <img src="/session-3-qr.png" class="qr" w-60 absolute top-0 left="0" translate-x="[40%]" opacity-0 transition="all duration-250 ease-in-out">
+    </div>
+    <div
+      relative
+      class="[&_.qr]:hover:opacity-100 [&_.img]:hover:opacity-50 hover:cursor-pointer hover:grayscale-100"
+      rounded-lg overflow-hidden  bg="black" h-fit
+      transition="all duration-250 ease-in-out"
+    >
+      <img src="/session-4.png" class="img" opacity-100>
+      <img src="/session-4-qr.png" class="qr" w-60 absolute top-0 left="0" translate-x="[40%]" opacity-0 transition="all duration-250 ease-in-out">
+    </div>
+  </div>
+</div>
+
+---
 class: py-10
 ---
 
 # 今日议程
 
 <div class="grid grid-cols-2 gap-4">
-  <div class="p-4 border border-violet-800/60 rounded-lg bg-violet-800/20 backdrop-blur">
+  <div class="p-4 rounded-lg backdrop-blur">
     <div class="font-bold text-lg mb-2">第一部分：基础认知</div>
     <ul class="space-y-2 text-sm">
       <li class="flex items-start gap-2">
@@ -52,7 +185,7 @@ class: py-10
       </li>
     </ul>
   </div>
-  <div class="p-4 border border-purple-800/60 rounded-lg bg-purple-800/20 backdrop-blur">
+  <div class="p-4 rounded-lg backdrop-blur">
     <div class="font-bold text-lg mb-2">第二部分：深入理解</div>
     <ul class="space-y-2 text-sm">
       <li class="flex items-start gap-2">
@@ -69,7 +202,7 @@ class: py-10
       </li>
     </ul>
   </div>
-  <div class="p-4 border border-indigo-800/60 rounded-lg bg-indigo-800/20 backdrop-blur">
+  <div class="p-4 rounded-lg backdrop-blur">
     <div class="font-bold text-lg mb-2">第三部分：机遇与展望</div>
     <ul class="space-y-2 text-sm">
       <li class="flex items-start gap-2">
@@ -86,7 +219,7 @@ class: py-10
       </li>
     </ul>
   </div>
-  <div class="p-4 border border-blue-800/60 rounded-lg bg-blue-800/20 backdrop-blur">
+  <div class="p-4 rounded-lg backdrop-blur">
     <div class="font-bold text-lg mb-2">第四部分：未来可能性</div>
     <ul class="space-y-2 text-sm">
       <li class="flex items-start gap-2">
