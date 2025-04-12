@@ -20,7 +20,7 @@
 | ![](https://i.ytimg.com/vi/XWjZQfSXKDg/hq720.jpg) | 2024.08.23 @ Hong Kong |
 | No More Runtime Setup! Let's Bundle, Distribute, Deploy, Scale LLMs Seamlessly with Ollama Operator (🇬🇧) | [Slides](https://talks.ayaka.io/nekoayaka/2024-08-23-kubecon-hk/) |
 |  |  |  |
-| ![](https://i.ytimg.com/vi/XWjZQfSXKDg/hq720.jpg) | 2024.08.21 @ Hong Kong |
+| ![](https://i.ytimg.com/vi/SlRMvDUY7lI/hq720.jpg) | 2024.08.21 @ Hong Kong |
 | Sit Back and Relax with Fault Awareness and Robust Instant Recovery for Large Scale AI Workloads (🇬🇧) | [Slides](https://baizeai.github.io/talks/2024-08-21-kubecon-hk/) |
 |  |  |  |
 | ![](https://github.com/user-attachments/assets/581582eb-1018-4dfe-8ec6-0a13dd3242ce) | 2024.04.18 @ Shanghai |
