@@ -177,11 +177,11 @@ class: py-10
       </li>
       <li class="flex items-start gap-2">
         <div class="i-carbon:arrow-right text-violet-400 mt-1 flex-shrink-0"></div>
-        <div>为什么需要MCP？</div>
+        <div>为什么需要 MCP？</div>
       </li>
       <li class="flex items-start gap-2">
         <div class="i-carbon:arrow-right text-violet-400 mt-1 flex-shrink-0"></div>
-        <div>MCP解决了哪些问题？</div>
+        <div>MCP 解决了哪些问题？</div>
       </li>
     </ul>
   </div>
@@ -232,7 +232,7 @@ class: py-10
       </li>
       <li class="flex items-start gap-2">
         <div class="i-carbon:arrow-right text-blue-400 mt-1 flex-shrink-0"></div>
-        <div>未来的"AI 原生 API"展望</div>
+        <div>未来的「AI 原生 API」展望</div>
       </li>
     </ul>
   </div>
@@ -264,7 +264,7 @@ class: py-10
       </div>
       <div class="flex items-center">
         <div class="i-carbon:function text-3xl mr-4 text-blue-400"></div>
-        <div>执行精确操作（调用API、比较大小、计数）</div>
+        <div>执行精确操作（调用 API、比较大小、计数）</div>
       </div>
     </div>
   </div>
@@ -298,7 +298,7 @@ class: py-10
 class: py-10
 ---
 
-# LLM的计算能力局限
+# LLM 的计算能力局限
 
 <div mt-10 />
 
@@ -326,15 +326,15 @@ class: py-10
       <rect x="10" y="10" width="480" height="280" rx="10" ry="10" fill="#1E1E1E" stroke="#444444" stroke-width="2" />
       <!-- 用户提问 -->
       <rect x="20" y="20" width="460" height="60" rx="5" ry="5" fill="#2D2D63" stroke="#3B3B8C" stroke-width="1" />
-      <text x="40" y="50" font-family="Arial" font-size="14px" fill="#FFFFFF">用户: "Strawberry"这个单词中有几个字母r?</text>
+      <text x="40" y="50" font-family="Arial" font-size="14px" fill="#FFFFFF">用户: "Strawberry" 这个单词中有几个字母 r?</text>
       <!-- AI回答 -->
       <rect x="20" y="90" width="460" height="180" rx="5" ry="5" fill="#1E1E1E" stroke="#444444" stroke-width="1" />
       <text x="40" y="120" font-family="Arial" font-size="14px" fill="#FFFFFF">AI: "Strawberry"中有1个字母r。</text>
-      <text x="40" y="150" font-family="Arial" font-size="14px" fill="#FFFFFF">字母r出现在单词的第三个位置，即</text>
+      <text x="40" y="150" font-family="Arial" font-size="14px" fill="#FFFFFF">字母 r 出现在单词的第三个位置，即</text>
       <text x="40" y="180" font-family="Arial" font-size="14px" fill="#FFFFFF">"Str"的最后一个字母。</text>
       <text x="450" y="125" font-family="Arial" font-size="16" fill="#f44336" text-anchor="middle">✗</text>
       <!-- 正确答案提示 -->
-      <text x="40" y="220" font-family="Arial" font-size="14px" fill="#4caf50">正确答案: 2个r (Strawberry)</text>
+      <text x="40" y="220" font-family="Arial" font-size="14px" fill="#4caf50">正确答案: 2 个 r (Strawberry)</text>
     </svg>
     <div class="text-center mt-2 text-sm">基本字母计数也不精确</div>
   </div>
@@ -352,7 +352,7 @@ clicks: 3
 ---
 
 <div text-4xl absolute :class="$clicks < 1 ? 'text-white' : 'translate-y--18 scale-40 text-white/30'" transition duration-500 ease-in-out>
-  <span>MCP是什么？</span>
+  <span>MCP 是什么？</span>
 </div>
 
 <div flex flex-col items-center relative>
@@ -447,7 +447,7 @@ class: py-10
     <div class="space-y-3 text-sm">
       <div class="flex items-start gap-2">
         <div class="i-carbon:arrow-right text-orange-400 mt-1 flex-shrink-0"></div>
-        <div>由API提供商（如OpenAI）定义接口标准</div>
+        <div>由 API 提供商（如 OpenAI）定义接口标准</div>
       </div>
       <div class="flex items-start gap-2">
         <div class="i-carbon:arrow-right text-orange-400 mt-1 flex-shrink-0"></div>
@@ -455,11 +455,11 @@ class: py-10
       </div>
       <div class="flex items-start gap-2">
         <div class="i-carbon:arrow-right text-orange-400 mt-1 flex-shrink-0"></div>
-        <div>通常在模型服务端执行，数据隐私风险</div>
+        <div>通常在 AI Agent 的服务端执行，数据隐私风险</div>
       </div>
       <div class="flex items-start gap-2">
         <div class="i-carbon:arrow-right text-orange-400 mt-1 flex-shrink-0"></div>
-        <div>每个模型API有自己的调用方式</div>
+        <div>每个模型 API 有自己的调用方式</div>
       </div>
     </div>
   </div>
@@ -484,7 +484,7 @@ class: py-10
       </div>
       <div class="flex items-start gap-2">
         <div class="i-carbon:arrow-right text-blue-400 mt-1 flex-shrink-0"></div>
-        <div>标准USB接口，支持"即插即用"扩展</div>
+        <div>标准 USB 接口，支持"即插即用"扩展</div>
       </div>
     </div>
   </div>
@@ -493,7 +493,7 @@ class: py-10
 <div v-click class="mt-6 bg-gradient-to-r from-orange-800/20 to-blue-800/20 rounded-lg p-4 backdrop-blur">
   <div class="font-bold">为什么 MCP 比直接实现 Function Calling 更好？</div>
   <div class="text-sm mt-2">
-    就像Web标准让所有浏览器都能访问同一个网站，MCP让所有支持该协议的AI模型都能使用同一套工具生态，而不必为每个模型单独开发接口。开发者一次构建，随处可用。
+    就像 Web 标准让所有浏览器都能访问同一个网站，MCP 让所有支持该协议的 AI 模型都能使用同一套工具生态，而不必为每个模型单独开发接口。开发者一次构建，随处可用。
   </div>
 </div>
 
@@ -511,7 +511,7 @@ Function Calling由各家API提供商定义接口标准，函数需预先定义�
 class: py-10
 ---
 
-# MCP解决什么问题？
+# MCP 解决什么问题？
 
 <div mt-10 />
 
@@ -561,7 +561,7 @@ MCP主要解决了三大问题：首先，它让LLM可以安全访问私有数�
 class: py-10
 ---
 
-# MCP实现方式
+# MCP 实现方式
 
 <div class="grid grid-cols-2 gap-8">
   <div class="p-4 border border-purple-800/60 rounded-lg bg-purple-800/20 backdrop-blur">
@@ -785,7 +785,7 @@ class: py-10
 
 # MCP 生态：从工具到智能网络
 
-<span>USB接口还是智能生态系统？</span>
+<span>USB 接口还是智能生态系统？</span>
 
 <div mt-4 />
 
@@ -849,7 +849,7 @@ class: py-10
       <div i-carbon:asset text-8xl />
     </div>
     <div bg="teal-800/30" w-full px-4 py-2 h="3rem" flex items-center justify-center text-center>
-      <span>A2A潜在融合</span>
+      <span>A2A 潜在融合</span>
     </div>
   </div>
 </v-clicks>
@@ -922,7 +922,7 @@ class: py-10
     </div>
     <div class="p-3 bg-orange-900/30 rounded-lg border border-orange-500/30 backdrop-blur">
       <div class="font-bold">用户认知障碍</div>
-      <div class="text-sm mt-1">普通用户难以判断MCP服务器的安全性</div>
+      <div class="text-sm mt-1">普通用户难以判断 MCP 服务器的安全性</div>
     </div>
   </div>
   <div class="space-y-4 pl-4">
@@ -932,7 +932,7 @@ class: py-10
     </div>
     <div class="p-3 bg-blue-900/30 rounded-lg border border-blue-500/30 backdrop-blur">
       <div class="font-bold">新兴方案：一键部署</div>
-      <div class="text-sm mt-1">Cline的MCP Market提供"应用商店"式体验</div>
+      <div class="text-sm mt-1">Cline 的 MCP Market 提供"应用商店"式体验</div>
     </div>
     <div class="p-3 bg-purple-900/30 rounded-lg border border-purple-500/30 backdrop-blur">
       <div class="font-bold">双刃剑效应</div>
@@ -1045,7 +1045,7 @@ class: py-10
 <div class="flex flex-col gap-2">
   <div v-click class="p-4 border-l-4 border-purple-500 bg-purple-900/20 rounded-r-lg backdrop-blur mb-3 transform transition-all duration-300">
     <div class="font-bold text-white">客户端生态不足</div>
-    <div class="text-sm mt-1 text-white/80">支持MCP的应用数量有限，主流Chat应用和Web应用尚未大规模集成</div>
+    <div class="text-sm mt-1 text-white/80">支持 MCP 的应用数量有限，主流 Chat 应用和 Web 应用尚未大规模集成</div>
   </div>
 
   <div v-click class="p-4 border-l-4 border-green-500 bg-green-900/20 rounded-r-lg backdrop-blur mb-3 transform transition-all duration-300">
@@ -1172,7 +1172,7 @@ glowSeed: 100
 class: py-10
 ---
 
-# 对AI重度用户的意义
+# 对 AI 重度用户的意义
 
 <div mt-10 />
 
@@ -1453,7 +1453,7 @@ class: py-10
 
 # 直接能力对比
 
-MCP 和 Function Calling 的异同
+MCP 和 A2A 的异同
 
 <div class="grid grid-cols-2 gap-6">
   <div class="space-y-4 pr-4">
@@ -1463,7 +1463,7 @@ MCP 和 Function Calling 的异同
         <div class="font-bold">功能扩展</div>
       </div>
       <div class="text-sm mt-2 pl-9">
-        赋予LLM新的能力，通过工具和资源访问扩展模型功能
+        赋予 LLM 新的能力，通过工具和资源访问扩展模型功能
       </div>
     </div>
     <div class="p-4 border border-purple-800/60 rounded-lg bg-purple-800/20 backdrop-blur">
@@ -1485,7 +1485,7 @@ MCP 和 Function Calling 的异同
       </div>
     </div>
     <div class="p-3 mt-4 bg-purple-900/20 rounded-lg border border-purple-500/30 backdrop-blur text-sm">
-      MCP像是给LLM装上了一套<span class="font-bold">工具箱</span>，扩展其能力范围
+      MCP 像是给 LLM 装上了一套<span class="font-bold">工具箱</span>，扩展其能力范围
     </div>
   </div>
 
@@ -1496,7 +1496,7 @@ MCP 和 Function Calling 的异同
         <div class="font-bold">代理协作</div>
       </div>
       <div class="text-sm mt-2 pl-9">
-        使不同的AI代理能够互相发现、通信和协作完成任务
+        使不同的 AI 代理能够互相发现、通信和协作完成任务
       </div>
     </div>
     <div class="p-4 border border-blue-800/60 rounded-lg bg-blue-800/20 backdrop-blur">
@@ -1518,7 +1518,7 @@ MCP 和 Function Calling 的异同
       </div>
     </div>
     <div class="p-3 mt-4 bg-blue-900/20 rounded-lg border border-blue-500/30 backdrop-blur text-sm">
-      A2A像是搭建了一个AI代理<span class="font-bold">协作网络</span>，让专业代理相互配合
+      A2A 像是搭建了一个 AI 代理<span class="font-bold">协作网络</span>，让专业代理相互配合
     </div>
   </div>
 </div>
@@ -1539,7 +1539,7 @@ A2A则聚焦于合作与分布式，侧重代理协作、分布式设计和多�
 class: py-10
 ---
 
-# MCP与A2A的互补性
+# MCP 与 A2A 的互补性
 
 <div mt-5 />
 
@@ -1550,7 +1550,7 @@ class: py-10
       现在: 并行发展
     </div>
     <div>
-      MCP和A2A目前处于并行发展阶段，各自解决不同问题域，积累各自的生态系统
+      MCP 和 A2A 目前处于并行发展阶段，各自解决不同问题域，积累各自的生态系统
     </div>
   </div>
 
@@ -1560,7 +1560,7 @@ class: py-10
       未来: 潜在融合
     </div>
     <div>
-      随着生态成熟，两种协议可能出现融合趋势，MCP工具可成为A2A代理的能力支撑
+      随着生态成熟，两种协议可能出现融合趋势，MCP 工具可成为 A2A 代理的能力支撑
     </div>
   </div>
 
@@ -1570,13 +1570,13 @@ class: py-10
       远景: 协议统一
     </div>
     <div>
-      长期来看，可能出现统一的AI交互协议，整合工具扩展与代理协作的优势
+      长期来看，可能出现统一的 AI 交互协议，整合工具扩展与代理协作的优势
     </div>
   </div>
 </div>
 
 <div class="mt-6 text-center p-3 bg-gradient-to-r from-indigo-900/20 to-blue-900/20 rounded-lg border border-blue-500/30 backdrop-blur">
-  MCP与A2A不是竞争关系，而是<span class="font-bold text-blue-500">互补的生态组件</span>，共同构建更强大的AI基础设施
+  MCP 与 A2A 不是竞争关系，而是<span class="font-bold text-blue-500">互补的生态组件</span>，共同构建更强大的 AI 基础设施
 </div>
 
 <!--
@@ -1595,7 +1595,7 @@ MCP与A2A实际上具有很强的互补性。从这张图可以看出，它们�
 class: py-10
 ---
 
-# API演进的历史视角
+# API 演进的历史视角
 
 <div class="relative w-full h-[400px] mt-8">
   <!-- 中央时间轴 -->
@@ -1620,7 +1620,7 @@ class: py-10
 
   <!-- 卡片 - 上下交错排布 -->
   <div v-click class="absolute top-[40px] left-[10%] transform -translate-x-1/2 w-56 p-3 border border-green-800/60 rounded-lg bg-green-800/20 backdrop-blur transition-all duration-700">
-    <div class="font-bold text-white">传统API (1990s-2010s)</div>
+    <div class="font-bold text-white">传统 API (1990s-2010s)</div>
     <div class="text-sm mt-1 text-white/80">
       - 严格的结构化接口<br>
       - 固定参数和返回值<br>
@@ -1632,9 +1632,9 @@ class: py-10
   <div v-click class="absolute top-[230px] left-[42%] transform -translate-x-1/2 w-56 p-3 border border-teal-800/60 rounded-lg bg-teal-800/20 backdrop-blur transition-all duration-700">
     <div class="font-bold text-white">Function Calling (2022+)</div>
     <div class="text-sm mt-1 text-white/80">
-      - API调用的AI友好层<br>
+      - API 调用的 AI 友好层<br>
       - 自然语言→结构化调用<br>
-      - 降低API使用复杂度<br>
+      - 降低 API 使用复杂度<br>
       - OpenAI, Claude等实现
     </div>
   </div>
@@ -1642,7 +1642,7 @@ class: py-10
   <div v-click class="absolute top-[40px] left-[70%] transform -translate-x-1/2 w-56 p-3 border border-blue-800/60 rounded-lg bg-blue-800/20 backdrop-blur transition-all duration-700">
     <div class="font-bold text-white">MCP/A2A (2024+)</div>
     <div class="text-sm mt-1 text-white/80">
-      - 标准化AI交互协议<br>
+      - 标准化 AI 交互协议<br>
       - 规范化工具/代理生态<br>
       - 解耦模型与能力扩展<br>
       - 促进生态多样性
@@ -1650,12 +1650,12 @@ class: py-10
   </div>
 
   <div v-click class="absolute top-[230px] left-[90%] transform -translate-x-1/2 w-56 p-3 border border-indigo-800/60 rounded-lg bg-indigo-800/20 backdrop-blur transition-all duration-700">
-    <div class="font-bold text-white">AI原生API (未来)</div>
+    <div class="font-bold text-white">AI 原生 API (未来)</div>
     <div class="text-sm mt-1 text-white/80">
       - 模型间直接交互<br>
       - 自主协商数据交换<br>
       - 动态服务链组合<br>
-      - API设计的范式转换
+      - API 设计的范式转换
     </div>
   </div>
 </div>
