@@ -29,6 +29,10 @@ export default mergeConfigs([
           hand: 'Playwrite IT Moderna',
           airi: 'Iceberg',
         },
+        timeouts: {
+          failure: 30000,
+          warning: 30000,
+        },
       }),
     ],
   },

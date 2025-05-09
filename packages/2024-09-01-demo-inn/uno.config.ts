@@ -30,6 +30,10 @@ export default mergeConfigs([
           cn: 'Noto Serif SC',
           hand: 'Playwrite IT Moderna',
         },
+        timeouts: {
+          failure: 30000,
+          warning: 30000,
+        },
       }),
     ],
   },
