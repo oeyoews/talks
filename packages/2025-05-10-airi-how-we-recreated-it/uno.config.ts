@@ -28,6 +28,8 @@ export default mergeConfigs([
           cn: 'Noto Serif SC',
           hand: 'Playwrite IT Moderna',
           airi: 'Iceberg',
+          cute: 'Kiwi Maru',
+          cuteen: 'Sniglet',
         },
         timeouts: {
           failure: 30000,

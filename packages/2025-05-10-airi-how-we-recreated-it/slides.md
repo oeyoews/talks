@@ -19,29 +19,29 @@ routerMode: hash
 <div translate-x--10>
 
 <h1>
-  <span font-airi>AIRI</span>: 我们是如何从零实现外网爆火的 AI 主播的
+  <span font-airi text-pink>AIRI</span>: 我们是如何从零实现外网爆火的 AI 主播的
 </h1>
 
 <p>
-  <span font-airi>AIRI</span>: How we recreated the famous AI VTuber on YouTube / Twitch from scratch
+  <span font-airi text="pink-300/90">AIRI</span>: How we recreated the famous AI VTuber on YouTube / Twitch from scratch
 </p>
 
 奶扣 Neko
 
-<img src="/airi-logo-grayscaled.svg" class="w-120 opacity-25" absolute right="[-25%]" bottom="[-230%]">
+<img src="/airi-logo-grayscaled-light-2.svg" class="w-180 opacity-13" absolute right="[-35%]" bottom="[-230%]">
 
 </div>
 
 ---
 layout: intro
 class: px-35
-glowSeed: 105
+glowSeed: 128
 ---
 
 <div flex items-center gap-3>
   <div
     v-click="1"
-    :class="$clicks < 1 ? 'translate-x--20 opacity-0' : 'translate-x-0 opacity-100'"
+    :class="$clicks < 1 ? 'translate-x--5 opacity-0' : 'translate-x-0 opacity-100'"
     flex flex-col items-start transition duration-500 ease-in-out min-w-60
   >
     <img src="/person/neko.jpeg" w-40 h-40 rounded-full object-cover mb-5>
@@ -63,7 +63,7 @@ glowSeed: 105
       </div>
       <div
         flex flex-wrap items-start content-start gap-4 transition duration-500 ease-in-out
-        :class="$clicks < 2 ? 'translate-y-20' : 'translate-y-0'"
+        :class="$clicks < 2 ? 'translate-y-5' : 'translate-y-0'"
       >
         <div flex items-center gap-2 text-2xl w-fit h-fit>
           <img src="/proj-airi-logo.svg" size="6.5" >
@@ -89,7 +89,7 @@ glowSeed: 105
       </div>
       <div
         flex flex-wrap items-start content-start gap-4 transition duration-500 ease-in-out
-        :class="$clicks < 3 ? 'translate-y-20' : 'translate-y-0'"
+        :class="$clicks < 3 ? 'translate-y-5' : 'translate-y-0'"
       >
         <div flex items-center gap-2 text-2xl w-fit h-fit>
           <img src="/moeru-ai-logo.png" size="6.5" />
@@ -156,31 +156,572 @@ glowSeed: 203
 </div>
 
 ---
+class: flex justify-center items-center gap-20 px-40 text-xl
+---
+
+<div
+  absolute text-6xl
+  :class="$clicks < 1 ? 'text-white' : 'translate-y--18 scale-40 text-white/30'"
+  transition duration-500 ease-in-out
+>
+  <span>AI 主播？</span>
+</div>
+
+<div flex flex-col items-center>
+  <v-clicks>
+    <div mt-4>
+      <h1 flex items-center text="5xl!">
+        <span>就是带货的那种数字人对吗？</span>
+      </h1>
+    </div>
+  </v-clicks>
+</div>
+
+---
+class: flex justify-center items-center gap-20 px-40 text-xl
+---
+
+<div
+  absolute text-6xl
+  :class="$clicks < 1 ? 'text-white' : 'translate-y--18 scale-40 text-white/30'"
+  transition duration-500 ease-in-out
+>
+  <span>听说过 VTuber 吗？</span>
+</div>
+
+<div flex flex-col items-center>
+  <v-clicks>
+    <div mt-4>
+      <h1 flex items-center text="5xl!">
+        <span>那听说过 AI VTuber 吗？</span>
+      </h1>
+    </div>
+  </v-clicks>
+</div>
+
+---
+class: py-0! px-0!
+clicks: 1
+---
+
+<div>
+  <div
+    w-full h-full bg="black/15" absolute backdrop-blur-sm z-100
+    :class="[$clicks < 1 ? 'opacity-0' : 'opacity-100']"
+    transition duration-1200 ease-in-out
+  >
+  </div>
+  <img
+    :class="[$clicks < 1 ? '' : 'blur-lg scale-120']"
+    src="/Neuro-sama_v2_character_sheet.webp"
+    transition duration-1200 ease-in-out
+  >
+  <div
+    :class="$clicks < 1 ? 'opacity-0' : 'opacity-100'"
+    absolute inset-0 translate="x-68 y-50" w-fit h-fit
+    transition duration-500 ease-in-out z-101
+  >
+    <div
+      text="20" font-cuteen text-rose-400
+      style="-webkit-text-stroke: 6px #ffeef7; paint-order: stroke;"
+      flex flex-col items-center
+    >
+      Neurosama
+    </div>
+    <div flex gap-4 rounded-lg bg="white/50" text="black/70" backdrop-blur-sm px-2 py-1>
+      <div flex items-center gap-2>
+        <div i-logos:youtube-icon text-2xl />
+        <div>63.6 万订阅</div>
+      </div>
+      <div flex items-center gap-2>
+        <div i-logos:twitch text-2xl />
+        <div>78.9 万订阅</div>
+      </div>
+      <div flex items-center gap-2>
+        <div i-simple-icons:bilibili text-cyan text-2xl />
+        <div>75.8 万粉丝</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+class: py-0! px-0!
+---
+
+<div>
+  <div absolute z-100 w-full h-full px-20 flex items-center>
+    <div flex flex-col justify-center h-fit w-fit bg="neutral-200/40" backdrop-blur-sm px-6 py-4 rounded-2xl>
+      <v-clicks>
+        <div flex items-center text-6xl gap-5>
+          <div text="white/80" i-solar:chat-round-like-bold-duotone /> <div text-4xl text="white/80">角色扮演</div>
+        </div>
+        <div flex items-center text-6xl gap-5>
+          <div text="white/80" i-solar:incoming-call-rounded-bold-duotone /> <div text-4xl text="white/80">类 ChatGPT Voice Chat 实时语音</div>
+        </div>
+        <div flex items-center text-6xl gap-5>
+          <div text="white/80" i-solar:eye-closed-bold-duotone /> <div text-4xl text="white/80">包括屏幕在内的视觉理解能力</div>
+        </div>
+        <div flex items-center text-6xl gap-5>
+          <div text="white/80" i-solar:gamepad-charge-bold-duotone /> <div text-4xl text="white/80">玩游戏</div>
+        </div>
+        <div flex items-center text-6xl gap-5>
+          <div text="white/80" i-solar:magnet-wave-bold-duotone /> <div text-4xl text="white/80">类 MCP 物理世界交互能力</div>
+        </div>
+      </v-clicks>
+    </div>
+  </div>
+  <div relative>
+    <div w-full h-full bg="black/70" absolute>
+    </div>
+    <video autoplay muted>
+      <source src="/Neuro-minecraft.mp4" />
+    </video>
+  </div>
+</div>
+
+---
+class: flex justify-center items-center gap-20 px-20 text-xl
+clicks: 2
+---
+
+<div
+  absolute text-4xl
+  :class="$clicks < 1 ? 'text-white scale-100' : 'translate-y--18 scale-40 text-white/30'"
+  transition duration-500 ease-in-out
+>
+  <span>所以我们做了什么？</span>
+</div>
+
+<div flex flex-col items-center>
+  <v-clicks>
+    <div mt-4>
+      <h1 flex items-center text="6xl!" gap-4>
+        <div flex gap-3 transition duration-500 ease-in-out text-nowrap>
+          <img src="/proj-airi-logo.svg" size="14" >
+          <span>Project <span font-airi>AIRI</span></span>
+        </div>
+      </h1>
+    </div>
+  </v-clicks>
+</div>
+
+---
+class: px-0! py-0!
+---
+
+<iframe v-click src="https://airi.moeru.ai" w-full h-full text-sm style="zoom: 0.8" />
+
+---
+class: flex justify-center items-center gap-20 px-40 text-xl
+---
+
+<div
+  absolute text-6xl
+  :class="$clicks < 1 ? 'text-white' : 'translate-y--18 scale-40 text-white/30'"
+  transition duration-500 ease-in-out
+>
+  <span>傲慢的开始</span>
+</div>
+
+<div flex flex-col items-center>
+  <v-clicks>
+    <div mt-4>
+      <h1 flex items-center text="5xl!">
+        <span>不就是套壳数字人吗？</span>
+      </h1>
+    </div>
+  </v-clicks>
+</div>
+
+---
+class: py-10
+glowSeed: 100
+---
+
+# 事情远比想象的复杂
+
+<span>为什么没那么简单？Vibe coding 不行吗？</span>
+
+<div mt-6 />
+
+<div flex flex-col gap-4>
+
+<v-clicks>
+
+<div border="2 solid violet-800/50" rounded-lg>
+  <div flex items-center bg="violet-800/30" px-3 py-2 text-violet-300>
+    <div i-carbon:web-services-container text-sm mr-1 />
+    <div text-xs>
+      <em>记忆系统的挑战</em>
+    </div>
+  </div>
+  <div bg="violet-800/10" px-4 py-3>
+    <div>
+      <span>
+        让 AI 拥有持续的记忆能力远比想象的复杂，不仅要考虑语义相关性，还需模拟人类的遗忘曲线和情感偏好
+      </span>
+    </div>
+    <div text-xs flex gap-2 mt-1 text-zinc-400>
+      <div>难以调试</div>
+      <div>难以追踪</div>
+      <div>难以管理</div>
+      <div>难以实现自然遗忘</div>
+    </div>
+  </div>
+</div>
+
+<div border="2 solid blue-800/50" rounded-lg>
+  <div flex items-center bg="blue-800/30" px-3 py-2 text-blue-300>
+    <div i-carbon:sysplex-distributor text-sm mr-1 />
+    <div text-xs>
+      <em>多模态交互</em>
+    </div>
+  </div>
+  <div bg="blue-800/10" px-4 py-3>
+    <div>
+      <span>
+      同时实现语音交互、视觉理解和游戏能力需要多个复杂系统无缝衔接，从语音识别到动作生成
+      </span>
+    </div>
+    <div text-xs flex gap-2 mt-1 text-zinc-400>
+      <div>模型延迟高</div>
+      <div>流程复杂</div>
+      <div>系统耦合</div>
+    </div>
+  </div>
+</div>
+
+<div border="2 solid cyan-800/50" rounded-lg>
+  <div flex items-center bg="cyan-800/30" px-3 py-2 text-cyan-300>
+    <div i-carbon:name-space text-sm mr-1 />
+    <div text-xs>
+      <em>性格与情感一致性</em>
+    </div>
+  </div>
+  <div bg="cyan-800/10" px-4 py-3>
+    <div>
+      <span>
+        保持 AI 角色在不同交互场景下的性格和情感一致性，尤其是在长时间对话中，非常困难
+      </span>
+    </div>
+    <div text-xs flex gap-2 mt-1 text-zinc-400>
+      <div>提示词难以完善</div>
+      <div>情绪系统复杂</div>
+      <div>上下文窗口有限</div>
+    </div>
+  </div>
+</div>
+
+</v-clicks>
+
+</div>
+
+---
+class: py-10
+clicks: 5
+---
+
+# 目前的效果
+
+<span>确实是工程落地了，一小部分东西吧...？</span>
+
+<div mt-10 />
+
+<div flex items-center gap-4>
+
+<v-clicks>
+
+<div
+  :class="$clicks < 1 ? 'translate-x--20 opacity-0' : 'translate-x-0 opacity-100'"
+  rounded-lg
+  border="2 solid pink-800" bg="pink-800/20"
+  backdrop-blur
+  flex-1 h-full
+  transition duration-500 ease-in-out
+>
+  <div px-5 py-16 flex items-center justify-center>
+    <div i-solar:database-bold-duotone size-20 />
+  </div>
+  <div bg="pink-800/30" w-full px-4 py-2 h="5rem" flex items-center justify-center text-center text-base>
+    <span>仿生记忆层</span>
+  </div>
+</div>
+
+<div
+  :class="$clicks < 2 ? 'translate-x--20 opacity-0' : 'translate-x-0 opacity-100'"
+  rounded-lg
+  border="2 solid fuchsia-800" bg="fuchsia-800/20"
+  backdrop-blur
+  flex-1 h-full
+  transition duration-500 ease-in-out
+>
+  <div px-5 py-16 flex items-center justify-center>
+    <div i-solar:microphone-3-bold-duotone size-20 />
+  </div>
+  <div bg="fuchsia-800/30" w-full px-4 py-2 h="5rem" flex items-center justify-center text-center text-base>
+    <span>实时语音流水线</span>
+  </div>
+</div>
+
+<div
+  :class="$clicks < 3 ? 'translate-x--20 opacity-0' : 'translate-x-0 opacity-100'"
+  rounded-lg
+  border="2 solid purple-800" bg="purple-800/20"
+  backdrop-blur
+  flex-1 h-full
+  transition duration-500 ease-in-out
+>
+  <div px-5 py-16 flex items-center justify-center>
+    <div i-solar:gamepad-minimalistic-bold-duotone size-20 />
+  </div>
+  <div bg="purple-800/30" w-full px-4 py-2 h="5rem" flex items-center justify-center text-center>
+    <span>游戏陪玩</span>
+  </div>
+</div>
+
+<div
+  :class="$clicks < 4 ? 'translate-x--20 opacity-0' : 'translate-x-0 opacity-100'"
+  rounded-lg
+  border="2 solid violet-800" bg="violet-800/20"
+  backdrop-blur
+  flex-1 h-full
+  transition duration-500 ease-in-out
+>
+  <div px-5 py-16 flex items-center justify-center>
+    <div i-solar:face-scan-square-bold-duotone size-20 />
+  </div>
+  <div bg="violet-800/30" w-full px-4 py-2 h="5rem" flex items-center justify-center text-center text-base>
+    <span>表情与动作</span>
+  </div>
+</div>
+
+<div
+  :class="$clicks < 5 ? 'translate-x--20 opacity-0' : 'translate-x-0 opacity-100'"
+  rounded-lg
+  border="2 solid indigo-800" bg="indigo-800/20"
+  backdrop-blur
+  flex-1 h-full
+  transition duration-500 ease-in-out
+>
+  <div px-5 py-16 flex items-center justify-center>
+    <div i-solar:link-circle-line-duotone size-20 />
+  </div>
+  <div bg="indigo-800/30" w-full px-4 py-2 h="5rem" flex items-center justify-center text-center>
+    <span>MCP & A2A</span>
+  </div>
+</div>
+
+</v-clicks>
+
+</div>
+
+---
+class: px-0! pt-6!
+---
+
+<div px-10 text-4xl mb-4>
+  刷推
+</div>
+
+<video autoplay muted>
+  <source src="/airi-browses-x.mp4" />
+</video>
+
+---
+class: px-0! pt-6!
+---
+
+<div px-10 text-4xl mb-4>
+  一起玩 Minecraft
+</div>
+
+<video autoplay muted>
+  <source src="/airi-plays-minecraft.mp4" />
+</video>
+
+---
+class: flex justify-center items-center gap-20 px-20 text-xl
+clicks: 2
+---
+
+<div
+  absolute text-4xl
+  :class="$clicks < 1 ? 'text-white scale-100' : 'translate-y--18 scale-40 text-white/30'"
+  transition duration-500 ease-in-out
+>
+  <span>有什么我们能分享的吗？</span>
+</div>
+
+<div flex flex-col items-center>
+  <v-clicks>
+    <div mt-4>
+      <h1 flex items-center text="6xl!" gap-4>
+        <div flex gap-3 :class="[$clicks < 2 ? 'translate-x-42' : 'translate-x-0']" transition duration-500 ease-in-out text-nowrap>
+          <img src="/proj-airi-logo.svg" size="14" >
+          <span>Project <span font-airi>AIRI</span></span>
+        </div>
+        <span :class="[$clicks < 2 ? 'opacity-0' : 'opacity-100']" transition duration-500 ease-in-out>
+          ×
+        </span>
+        <div flex gap-3 :class="[$clicks < 2 ? 'opacity-0' : 'opacity-100']" transition duration-500 ease-in-out>
+          <img src="/moeru-ai-logo.png" size="14" />
+          <span font-cuteen>Moeru AI</span>
+        </div>
+      </h1>
+    </div>
+  </v-clicks>
+</div>
+
+---
+class: py-10
+---
+
+# 部分形成生态
+
+我们尽最大努力让大家都可以用上我们也在使用的先进工具和工作流封装方法...
+
+- [xsAI](https://github.com/moeru-ai/xsai): Vercel AI SDK 替代品，超级迷你和可拓展
+- [Velin](https://github.com/luoling8192/velin): 用 Vue 或者 JSX 书写提示词
+- [`unspeech`](https://github.com/moeru-ai/unspeech): 用于代理云服务 TTS 和 STT 的服务器实现，类似语音界的 LiteLLM / OpenRouter
+- [MCP Launcher](https://github.com/moeru-ai/mcp-launcher): 易于使用的 MCP 启动器，就像用于 MCP 启动和管理的 Ollama 一样！
+- [xsAI 的 🤗 Transformers.js 提供商](https://github.com/moeru-ai/xsai-transformers)：在浏览器里跑 LLM，Embedding，让快速 PoC RAG 不是梦！
+- [AIRI Factorio](https://github.com/moeru-ai/airi-factorio): 让 AIRI 玩 Factorio
+- [Inventory](https://github.com/moeru-ai/inventory): 中心化模型目录和默认提供商配置的公开 API 服务
+- [Demodel](https://github.com/moeru-ai/demodel): 轻松加速各种推理引擎和模型下载器拉/下载模型或数据集的速度
+- [`@proj-airi/drizzle-duckdb-wasm`](https://github.com/moeru-ai/airi/tree/main/packages/drizzle-duckdb-wasm/README.md): 浏览器里跑分析型数据库做记忆层！
+- [`hfup`](https://github.com/moeru-ai/hfup): 帮助部署、打包到 HuggingFace Spaces 的工具集
+- [🥺 SAD](https://github.com/moeru-ai/sad): 自托管和浏览器运行 LLM 的文档和说明
+
+---
+class: flex justify-center flex-col items-center gap-10 px-20 text-4xl
+---
+
+<h1 text="6xl!">
+  不仅是网页端...
+</h1>
+
+客户端桌宠和个人 AI 助理也不是问题
+
+---
+class: py-10
+---
+
+# 想要文字版？
+
+我们还写了好多好多 DevLog 介绍进展
+
+<div flex gap-3 justify-between>
+  <a href="https://airi.moeru.ai/docs/blog/devlog-20250305/">
+    <div flex items-center flex-col gap-2>
+      <img src="/airi-devlog-screenshot-1.png" h-90 rounded-lg />
+      <span>介绍视觉设计</span>
+    </div>
+  </a>
+  <a href="https://airi.moeru.ai/docs/blog/devlog-20250320/">
+    <div flex items-center flex-col gap-2>
+      <img src="/airi-devlog-screenshot-2.png" h-90 rounded-lg />
+      <span>介绍 UI 设计</span>
+    </div>
+  </a>
+  <a href="https://airi.moeru.ai/docs/blog/devlog-20250406/">
+    <div flex items-center flex-col gap-2>
+      <img src="/airi-devlog-screenshot-3.png" h-90 rounded-lg />
+      <span>介绍记忆层设计和 v0.4 更新</span>
+    </div>
+  </a>
+</div>
+
+---
+class: flex justify-center flex-col items-center gap-10 px-20 text-4xl
+---
+
+# 你说不是要搞 VTuber 吗？那角色在哪里？
+
+---
+class: py-10
+theme: light
+glowSeed: 210
+---
+
+<div relative>
+  <div translate="x--50 y--14">
+    <img src="/relu-art-2.jpg">
+  </div>
+
+  <div absolute inset-0 translate="x-154 y-5">
+    <img src="/relu-art-1.png" w-70>
+  </div>
+
+  <div absolute inset-0 translate="x-144 y--5" rotate--15>
+    <img src="/relu-art-3.png" w-50>
+  </div>
+
+  <div absolute inset-0 translate="x-164 y-75">
+    <img src="/relu-art-4.png" w-50>
+  </div>
+
+  <div absolute inset-0 translate="x-64 y-95" rotate-20>
+    <img src="/relu-art-5.png" w-50>
+  </div>
+</div>
+
+---
+class: py-10
+glowSeed: 1298
+---
+
+# 感兴趣吗？
+
+虽然是开源项目，但是也欢迎感兴趣的设计师，产品经理，工程师们一起去实现这可能的生命形态
+
+<div flex>
+  <div text-sm text="zinc-300" text-right flex flex-row gap-2 mt-6 translate-x-2>
+    <div flex items-center flex-col font-bold text-xl>
+      <img src="/github_qr.png" w-70 />
+      <div translate-y--4>GitHub</div>
+    </div>
+    <div flex items-center flex-col font-bold text-xl>
+      <img src="/discord_qr.png" w-70 />
+      <div translate-y--4>Discord</div>
+    </div>
+    <div flex items-center flex-col font-bold text-xl>
+      <img src="/telegram_qr.png" w-70 />
+      <div translate-y--4>Telegram</div>
+    </div>
+  </div>
+</div>
+
+---
 title: Thank you
 class: py-10
 glowSeed: 230
-poweredBy: true
 ---
 
 <div flex>
   <div flex-1>
     <div mt-50 />
-    <div text="[48px]">
-      谢谢
-    </div>
-    <div text="white/50">
-      Thank you
+    <div flex flex-col gap-4 translate="y--52" h-full>
+      <div flex flex-col translate="y-4" flex-1>
+        <div text="[48px]">
+          谢谢
+        </div>
+        <div text="white/50">
+          Thank you
+        </div>
+      </div>
+      <img src="/relu-art-6.gif" size-50 rounded-2xl overflow-hidden translate-y--20>
     </div>
   </div>
-  <div text-sm text="zinc-300" text-right flex flex-col gap-3 mt-3>
+  <div text-lg text="zinc-300" text-right flex flex-col gap-3 mt-3>
     <div>
       演示文稿开源在 <a href="https://github.com/nekomeowww/talks"><div inline-block mr-1 translate-y-0.8 i-ri:github-fill />github.com/nekomeowww/talks</a>
     </div>
     <div>
       演示文稿使用 <a href="https://sli.dev"><div inline-block mr-1 translate-y-0.8 i-logos:slidev />sli.dev</a> 构建
     </div>
-    <div self-end mt-16 translate-x-6>
-      <img src="/slide_qr.png" w-50 />
+    <div self-end mt-16 translate-x-14 translate-y--9>
+      <img src="/slide_qr.png" w-100 />
     </div>
   </div>
 </div>
