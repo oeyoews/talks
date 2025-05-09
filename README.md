@@ -9,7 +9,7 @@
 |  |  |
 | --- | --- |
 | ![](https://github.com/user-attachments/assets/1486cc4a-9f14-42e4-9720-037736a6e0fe) | 2025.05.10 @ Hangzhou |
-| AIRI: 我们是如何从零实现外网爆火的 AI 主播的 (🇨🇳) | [Slides]([https://talks.ayaka.io/nekoayaka//](https://talks.ayaka.io/nekoayaka/2025-05-10-airi-how-we-recreated-it/)) |
+| [AIRI](https://github.com/moeru-ai/airi): 我们是如何从零实现外网爆火的 AI 主播的 (🇨🇳) | [Slides]([https://talks.ayaka.io/nekoayaka//](https://talks.ayaka.io/nekoayaka/2025-05-10-airi-how-we-recreated-it/)) |
 
 ## Presented...
 
