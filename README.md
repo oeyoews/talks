@@ -8,7 +8,7 @@
 
 |  |  |
 | --- | --- |
-| ![](https://github.com/user-attachments/assets/7dacca02-f6bd-40b6-aa7f-9d409fc7ce42) | 2024.11.14 @ Shanghai |
+| ![](https://github.com/user-attachments/assets/7dacca02-f6bd-40b6-aa7f-9d409fc7ce42) | 2025.03.13 @ Shanghai |
 | 深入浅出 LLM 4：DeepSeek 为什么这么火？ (🇨🇳) | [Slides](https://talks.ayaka.io/nekoayaka/2025-03-13-deep-dive-llm-deepseek-and-how/) |
 | ![](https://github.com/user-attachments/assets/e82484ce-58d1-4e9d-a0dd-2c9c616b0da5) | 2024.11.14 @ Shanghai |
 | 深入浅出 LLM 3：训练后范式的开启 (🇨🇳) | [Slides](https://talks.ayaka.io/nekoayaka/2024-11-14-deep-dive-llm-era-of-post-training/) |
