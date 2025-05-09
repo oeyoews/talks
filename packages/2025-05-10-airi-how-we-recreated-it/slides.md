@@ -28,6 +28,8 @@ routerMode: hash
 
 奶扣 Neko
 
+<img src="/airi-logo-grayscaled.svg" class="w-120 opacity-25" absolute right="[-25%]" bottom="[-230%]">
+
 </div>
 
 ---
@@ -39,7 +41,7 @@ glowSeed: 105
 <div flex items-center gap-3>
   <div
     v-click="1"
-    :class="$clicks < 1 ? 'translate-x--20' : 'translate-x-0'"
+    :class="$clicks < 1 ? 'translate-x--20 opacity-0' : 'translate-x-0 opacity-100'"
     flex flex-col items-start transition duration-500 ease-in-out min-w-60
   >
     <img src="/person/neko.jpeg" w-40 h-40 rounded-full object-cover mb-5>
@@ -68,7 +70,7 @@ glowSeed: 105
           <div>Project AIRI</div>
         </div>
         <div flex items-center gap-2 text-2xl w-fit h-fit>
-          <div i-twemoji:parrot /><div>Langchain Go/JavaScript</div>
+          <div i-simple-icons:ollama inline-block /> Ollama
         </div>
         <div flex items-center gap-2 text-2xl w-fit h-fit>
           <div i-devicon:kubernetes inline-block /> Kubernetes
@@ -116,11 +118,11 @@ glowSeed: 203
   <div grid="~ cols-2" gap-4>
     <div
       relative
-      class="[&_.qr]:hover:opacity-100 [&_.img]:hover:opacity-50 hover:cursor-pointer hover:grayscale-100"
+      class="[&_.qr]:hover:opacity-100 [&_.img]:hover:opacity-20 hover:cursor-pointer hover:grayscale-100"
       rounded-lg overflow-hidden  bg="black" h-fit
       transition="all duration-250 ease-in-out"
     >
-      <img src="/session-1.png" class="img" opacity-100>
+      <img src="/session-1.png" class="img" opacity-100 transition="all duration-250 ease-in-out">
       <img src="/session-1-qr.png" class="qr" w-60 absolute top-0 left="0" translate-x="[40%]" opacity-0 transition="all duration-250 ease-in-out">
     </div>
     <div
@@ -129,7 +131,7 @@ glowSeed: 203
       rounded-lg overflow-hidden  bg="black" h-fit
       transition="all duration-250 ease-in-out"
     >
-      <img src="/session-2.png" class="img" opacity-100>
+      <img src="/session-2.png" class="img" opacity-100 transition="all duration-250 ease-in-out">
       <img src="/session-2-qr.png" class="qr" w-60 absolute top-0 left="0" translate-x="[40%]" opacity-0 transition="all duration-250 ease-in-out">
     </div>
     <div
@@ -138,7 +140,7 @@ glowSeed: 203
       rounded-lg overflow-hidden  bg="black" h-fit
       transition="all duration-250 ease-in-out"
     >
-      <img src="/session-3.png" class="img" opacity-100>
+      <img src="/session-3.png" class="img" opacity-100 transition="all duration-250 ease-in-out">
       <img src="/session-3-qr.png" class="qr" w-60 absolute top-0 left="0" translate-x="[40%]" opacity-0 transition="all duration-250 ease-in-out">
     </div>
     <div
@@ -147,7 +149,7 @@ glowSeed: 203
       rounded-lg overflow-hidden  bg="black" h-fit
       transition="all duration-250 ease-in-out"
     >
-      <img src="/session-4.png" class="img" opacity-100>
+      <img src="/session-4.png" class="img" opacity-100 transition="all duration-250 ease-in-out">
       <img src="/session-4-qr.png" class="qr" w-60 absolute top-0 left="0" translate-x="[40%]" opacity-0 transition="all duration-250 ease-in-out">
     </div>
   </div>
