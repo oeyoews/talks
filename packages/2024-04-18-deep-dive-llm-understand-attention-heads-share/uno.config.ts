@@ -1,4 +1,4 @@
-import { defineConfig, presetAttributify, presetIcons, presetUno } from 'unocss'
+import { defineConfig, presetAttributify, presetIcons, presetWind3 } from 'unocss'
 
 export default defineConfig({
   shortcuts: [
@@ -10,7 +10,7 @@ export default defineConfig({
     ...Array.from({ length: 30 }, (_, i) => `delay-${(i + 1) * 100}`),
   ],
   presets: [
-    presetUno({
+    presetWind3({
       dark: 'class',
     }),
     presetAttributify(),
