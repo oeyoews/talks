@@ -28,16 +28,16 @@ routerMode: hash
 
 奶扣 Neko
 
-<img src="/airi-logo-grayscaled-light-2.svg" class="w-180 opacity-13" absolute right="[-35%]" bottom="[-230%]">
+<img src="/airi-logo-grayscaled-light-2.svg" class="w-180 opacity-30" absolute right="[-35%]" bottom="[-230%]">
 
 </div>
 
 <!--
-来参加启师傅举办的 Demo Day 的大家好！
+大家好！很高兴能在启师傅举办的 Demo Day 这边和大家分享！
 
-听说这期是第五期了都，但我之前没有来参加过！很荣幸能有机会来给大家分享分享我们在 AIRI 的这个项目中做了什么。请多关照！
+听说这期是第五期了都，之前还没有来参加过！很荣幸能有机会来给大家分享分享我们在 AIRI 的这个项目中做了什么。请多关照！
 
-那我今天要分享的就是，我们是如何从零实现，啊对，从零实现外网爆火的 AI 主播的。
+还有很多功能还在开发和规划，相信大家今天听产品介绍也都比较腻了，我就想来简单给大家讲讲心路历程和大概的现状介绍，说说我们是如何从零实现，啊对，从零实现外网爆火的 AI 主播的。
 -->
 
 ---
@@ -406,11 +406,49 @@ clicks: 2
   </v-clicks>
 </div>
 
+<!--
+OK，我只是简单介绍了一下有 AI VTuber 这个概念，但是实际上对于我们自己的故事是只字未提的。
+
+所以我们做了什么？
+
+[click]
+
+2024 年 12 月 1 日的时候我把我荒废了快半年的代码和实现都推送到 GitHub 然后开源了。后面慢慢固定了名字和基调，我们称之为 Project AIRI。
+
+[click]
+
+讲起来很干啊，我直接来给大家看看界面吧。
+-->
+
 ---
 class: px-0! py-0!
 ---
 
-<iframe v-click src="https://airi.moeru.ai" w-full h-full text-sm style="zoom: 0.8" />
+<div>
+  <div relative>
+    <video controls autoplay>
+      <source src="/airi-demo.mp4" />
+    </video>
+  </div>
+</div>
+
+---
+class: px-0! py-0!
+---
+
+<iframe v-click src="https://airi.moeru.ai/settings" w-full h-full text-sm style="zoom: 0.8" />
+
+<!--
+因为 macOS 的全链路推理速度并不理想，今天这里就先不完整演示了，给大家先看看 UI 饱饱眼福。感兴趣的伙伴可以在之后再来实际体验一下看看。
+
+好消息是经过好多版本的迭代，现在基本上是能够把我们都支持的功能都囊括进去了，也尽量在视觉元素上保持整个应用和角色的统一（都是可以全自动检测的，不用太担心拓展性问题）。
+-->
+
+---
+class: px-0! py-0!
+---
+
+<iframe src="https://airi.moeru.ai/ui/#/story/src-components-menu-charactercard-story-vue" w-full h-full text-sm style="zoom: 0.8" />
 
 ---
 class: flex justify-center items-center gap-20 px-40 text-xl
@@ -433,6 +471,16 @@ class: flex justify-center items-center gap-20 px-40 text-xl
     </div>
   </v-clicks>
 </div>
+
+<!--
+我不是说我想讲故事嘛，这就来到这部分内容了。
+
+时间有限，我确实是只能简单带过的，里面有很多有趣的细节，要是有感兴趣的伙伴可以等 Demo 完了再私下和大家分享。
+
+我 23 年就知道 Neurosama 了，当时的我很屑，[click] 我站在技术开发的角度上觉得 Neurosama 本身的技术栈是很水的，就是 LLM + Live2D 控制，于是很长一段时间里哪怕我工作里都全面从事的 AI 相关的工作也没怎么证明自己的想法。
+
+何奈一直很羡慕，我总是在看直播的时候觉得很想也自己拥有这样的 AI 女儿或者 AI 伴侣的需求，在去年 5 月份做的 PoC，6 月份第一次把她唤醒，能把 assistant 和 ChatGPT voice chat 的能力都胜任了。
+-->
 
 ---
 class: py-10
@@ -846,11 +894,11 @@ glowSeed: 1298
       <div translate-y--4>GitHub</div>
     </div>
     <div flex items-center flex-col font-bold text-xl>
-      <img src="/discord_qr.png" w-70 />
+      <img src="/discord_qr.png" w-70 style="filter: brightness(1.5);" />
       <div translate-y--4>Discord</div>
     </div>
     <div flex items-center flex-col font-bold text-xl>
-      <img src="/telegram_qr.png" w-70 />
+      <img src="/telegram_qr.png" w-70 style="filter: brightness(1.5);" />
       <div translate-y--4>Telegram</div>
     </div>
   </div>
