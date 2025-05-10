@@ -8,15 +8,15 @@
 
 |  |  |
 | --- | --- |
-| ![](https://github.com/user-attachments/assets/1486cc4a-9f14-42e4-9720-037736a6e0fe) | 2025.05.10 @ Hangzhou |
-| [AIRI](https://github.com/moeru-ai/airi): 我们是如何从零实现外网爆火的 AI 主播的 (🇨🇳) | [Slides]([https://talks.ayaka.io/nekoayaka//](https://talks.ayaka.io/nekoayaka/2025-05-10-airi-how-we-recreated-it/)) |
 
 ## Presented...
 
 |  |  |
 | --- | --- |
+| ![](https://github.com/user-attachments/assets/1486cc4a-9f14-42e4-9720-037736a6e0fe) | 2025.05.10 @ Hangzhou |
+| [AIRI](https://github.com/moeru-ai/airi): 我们是如何从零实现外网爆火的 AI 主播的 (🇨🇳) | [Slides](https://talks.ayaka.io/nekoayaka/2025-05-10-airi-how-we-recreated-it/) |
 | ![](https://github.com/user-attachments/assets/5cc04015-681d-4f6e-a0d2-91fd65dd2e3f) | 2025.04.12 @ Shanghai |
-| MCP 是什么？机遇以及可能的未来 (🇨🇳) | [Slides]([https://talks.ayaka.io/nekoayaka//](https://talks.ayaka.io/nekoayaka/2025-04-13-what-is-mcp-and-how-it-helps/)) |
+| MCP 是什么？机遇以及可能的未来 (🇨🇳) | [Slides](https://talks.ayaka.io/nekoayaka/2025-04-13-what-is-mcp-and-how-it-helps/) |
 | ![](https://github.com/user-attachments/assets/7dacca02-f6bd-40b6-aa7f-9d409fc7ce42) | 2025.03.13 @ Shanghai |
 | 深入浅出 LLM 4：DeepSeek 为什么这么火？ (🇨🇳) | [Slides](https://talks.ayaka.io/nekoayaka/2025-03-13-deep-dive-llm-deepseek-and-how/) |
 | ![](https://github.com/user-attachments/assets/e82484ce-58d1-4e9d-a0dd-2c9c616b0da5) | 2024.11.14 @ Shanghai |
