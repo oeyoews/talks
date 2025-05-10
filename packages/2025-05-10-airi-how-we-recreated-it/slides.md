@@ -32,6 +32,14 @@ routerMode: hash
 
 </div>
 
+<!--
+来参加启师傅举办的 Demo Day 的大家好！
+
+听说这期是第五期了都，但我之前没有来参加过！很荣幸能有机会来给大家分享分享我们在 AIRI 的这个项目中做了什么。请多关照！
+
+那我今天要分享的就是，我们是如何从零实现，啊对，从零实现外网爆火的 AI 主播的。
+-->
+
 ---
 layout: intro
 class: px-35
@@ -70,16 +78,19 @@ glowSeed: 128
           <div>Project AIRI</div>
         </div>
         <div flex items-center gap-2 text-2xl w-fit h-fit>
-          <div i-simple-icons:ollama inline-block /> Ollama
+          <div i-logos:hugging-face-icon inline-block /> Hugging Face
         </div>
         <div flex items-center gap-2 text-2xl w-fit h-fit>
-          <div i-devicon:kubernetes inline-block /> Kubernetes
+          <div i-logos:vue /><div>Vue</div>
+        </div>
+        <div flex items-center gap-2 text-2xl w-fit h-fit>
+          <div i-simple-icons:ollama inline-block /> Ollama
         </div>
         <div flex items-center gap-2 text-2xl w-fit h-fit>
           <div i-devicon:go /><div>Golang</div>
         </div>
         <div flex items-center gap-2 text-2xl w-fit h-fit>
-          <div i-logos:vue /><div>Vue</div>
+          <div i-devicon:kubernetes inline-block /> Kubernetes
         </div>
       </div>
     </div>
@@ -108,6 +119,24 @@ glowSeed: 128
     <img src="/nekomeoww-qr.png" h-50>
   </div>
 </div>
+
+<!--
+那首先介绍一下我自己啊。
+
+[click]
+
+我自己是自称自己叫所谓「Literally Full-stack Developer 」，也就是「真正意义上的全栈开发」，在当今这个 AI hype 的背景下的含义就是，除去平时大家提到独立开发者会的前端后端部署什么的，一个模型从设计，到数据准备，训练和推理调优这些我也都做过，基本上可以说是全干了。
+
+我感觉我还是挺浪费自己的时间的哈哈哈，如果我中间说的哪里不好也请大家担待。
+
+[click]
+
+我最近主要是在我自己的这个 Project AIRI 组织里面贡献最多，其次就是最近在 Hugging Face 的 transformers 和 vLLM 那边有一些贡献，我也做过很多 Vue，Golang，Kubernetes（也就是大家说的 K8s）的工作，事实上我主业是做 K8s 云计算的。
+
+[click]
+
+其他一些比较有意思的就是也在 Moeru AI 和大家一起研究 AI 应用基建，还有 3 年前就创立的这个 Obsidian 知识库工作流 Nolebase，有兴趣的可以去我的 GitHub 看看。
+-->
 
 ---
 title: The previous ones
@@ -155,6 +184,12 @@ glowSeed: 203
   </div>
 </div>
 
+<!--
+我这次确实也并不是第一次上台，先前（包括在公司内做知识分享介绍后训练热潮，DeepSeek 火爆原因解析，还有 MCP，以及去年在香港 KubeCon 分享 Ollama 全自动 Serverless 方案的 session 都在这里，
+
+大家感兴趣的话可以在这里扫码玩玩看。
+-->
+
 ---
 class: flex justify-center items-center gap-20 px-40 text-xl
 ---
@@ -177,6 +212,19 @@ class: flex justify-center items-center gap-20 px-40 text-xl
   </v-clicks>
 </div>
 
+<!--
+好，回到正题哈。
+
+AI 主播？
+啥叫 AI 主播？
+
+[click]
+
+可能很多人想的就是数字人，24 小时直播带货的那种数字人。那我这次要介绍的是那种数字人吗？
+
+实际上不是。
+-->
+
 ---
 class: flex justify-center items-center gap-20 px-40 text-xl
 ---
@@ -198,6 +246,18 @@ class: flex justify-center items-center gap-20 px-40 text-xl
     </div>
   </v-clicks>
 </div>
+
+<!--
+那接下来我们稍稍深入一些，大家听说过 VTuber 吗？
+
+[click]
+
+如果听过还看过的话，有听说过 AI VTuber 吗？
+
+我猜很多人应该都是没有听过或者看到过的，这个受众群体应该说是既小众也不小众，它稍微有点吃粉丝经济，但是又和普通的偶像或者明星有很大差距。
+
+感兴趣的话可以细聊！这里时间不多我就不太深入！
+-->
 
 ---
 class: py-0! px-0!
@@ -245,6 +305,22 @@ clicks: 1
   </div>
 </div>
 
+<!--
+那实际上我标题里面想要提到的所谓「外网爆火的 AI 主播」，就是指的类似于这位的 AI VTuber 虚拟主播。
+
+这是她的形象。
+
+[click]
+
+她有多火爆呢？
+
+事实上我觉得她的数据还是可以的了，YouTube 粉丝 63 万，Twitch 直播 78 万（月付费订阅），还有 75 万 B 站粉丝（也是官方团队做的）。
+
+而且这个品类里面基本上没有这么能打的。
+
+那我们开始介绍我们的旅程之前我们就先看看她是怎么样工作的吧。
+-->
+
 ---
 class: py-0! px-0!
 ---
@@ -287,6 +363,22 @@ class: py-0! px-0!
     </video>
   </div>
 </div>
+
+<!--
+这个是其中一个直播切片啊，是 Neurosama 在和她的创造者 Vedal 和另一个网友一起在玩名为我的世界 Minecraft 的游戏，这里游戏画面是 Neurosama 的第一视角。
+
+可以看到她能走路，能说话，还能和世界交互，甚至很调皮地把他们在游戏里搭建的小房子给点着了。（啧啧啧，只能说很危险）
+
+[click]
+
+这里面我们能看出来几个东西呢？
+
+- 角色扮演
+- [click] 实时交互
+- [click] 视觉理解
+- [click] 玩游戏
+- [click] 外部工具交互
+-->
 
 ---
 class: flex justify-center items-center gap-20 px-20 text-xl
@@ -797,11 +889,3 @@ glowSeed: 230
     </div>
   </div>
 </div>
-
-<!--
-With all of that, that's the end of today's session.
-
-I bet many of you may asking for how to make this PPT, we open sourced it, it built with codes.
-
-Any questions?
--->
