@@ -250,7 +250,11 @@ class: py-0! px-0!
 ---
 
 <div>
-  <div absolute z-100 w-full h-full px-20 flex items-center>
+  <div
+    absolute z-100 w-full h-full px-20 flex items-center
+    :class="[$clicks < 1 ? 'opacity-0' : 'opacity-100']"
+    transition duration-500 ease-in-out
+  >
     <div flex flex-col justify-center h-fit w-fit bg="neutral-200/40" backdrop-blur-sm px-6 py-4 rounded-2xl>
       <v-clicks>
         <div flex items-center text-6xl gap-5>
@@ -272,7 +276,11 @@ class: py-0! px-0!
     </div>
   </div>
   <div relative>
-    <div w-full h-full bg="black/70" absolute>
+    <div
+      w-full h-full bg="black/70" absolute
+      :class="[$clicks < 1 ? 'opacity-0' : 'opacity-100']"
+      transition duration-500 ease-in-out
+    >
     </div>
     <video autoplay muted>
       <source src="/Neuro-minecraft.mp4" />
@@ -359,14 +367,13 @@ glowSeed: 100
   <div bg="violet-800/10" px-4 py-3>
     <div>
       <span>
-        让 AI 拥有持续的记忆能力远比想象的复杂，不仅要考虑语义相关性，还需模拟人类的遗忘曲线和情感偏好
+        记忆层并不是 RAG 就结束了，不仅要考虑语义、时间相关性，遗忘曲线和记忆对应的情绪同样重要
       </span>
     </div>
     <div text-xs flex gap-2 mt-1 text-zinc-400>
-      <div>难以调试</div>
-      <div>难以追踪</div>
-      <div>难以管理</div>
-      <div>难以实现自然遗忘</div>
+      <div>目前的 Mem0 和 Zep，LlamaIndex 方案都是纯粹面向 RAG 的</div>
+      <div>没有实现遗忘曲线和情绪化的能力</div>
+      <div>更没有办法 Debug 和可观测</div>
     </div>
   </div>
 </div>
@@ -381,13 +388,13 @@ glowSeed: 100
   <div bg="blue-800/10" px-4 py-3>
     <div>
       <span>
-      同时实现语音交互、视觉理解和游戏能力需要多个复杂系统无缝衔接，从语音识别到动作生成
+      同时实现实时语音交互、身体控制、视觉和游戏能力需要多流水线无缝衔接
       </span>
     </div>
     <div text-xs flex gap-2 mt-1 text-zinc-400>
-      <div>模型延迟高</div>
-      <div>流程复杂</div>
-      <div>系统耦合</div>
+      <div>业界主要还是在 VAD + ASR + TTS 拼接流水线，端到端可定制化程度低</div>
+      <div>没有现成稳定的动作生成方案</div>
+      <div>需要潜心优化延迟，并非 vibe 能出结果</div>
     </div>
   </div>
 </div>
@@ -396,19 +403,19 @@ glowSeed: 100
   <div flex items-center bg="cyan-800/30" px-3 py-2 text-cyan-300>
     <div i-carbon:name-space text-sm mr-1 />
     <div text-xs>
-      <em>性格与情感一致性</em>
+      <em>工程化也是难题</em>
     </div>
   </div>
   <div bg="cyan-800/10" px-4 py-3>
     <div>
       <span>
-        保持 AI 角色在不同交互场景下的性格和情感一致性，尤其是在长时间对话中，非常困难
+        系统模块非常多，工程化难度比 CRUD 应用高
       </span>
     </div>
     <div text-xs flex gap-2 mt-1 text-zinc-400>
-      <div>提示词难以完善</div>
-      <div>情绪系统复杂</div>
-      <div>上下文窗口有限</div>
+      <div>提示词 和 Lorebook，以及角色卡是分裂的三个生态和系统，难以同时开发</div>
+      <div>从有状态 MCP 到有状态 Agent，全部都靠回调会很难</div>
+      <div>模块繁多</div>
     </div>
   </div>
 </div>
@@ -533,11 +540,23 @@ class: px-0! pt-6!
 ---
 
 <div px-10 text-4xl mb-4>
-  一起玩 Minecraft
+  一起玩 我的世界 Minecraft
 </div>
 
 <video autoplay muted>
   <source src="/airi-plays-minecraft.mp4" />
+</video>
+
+---
+class: px-0! pt-6!
+---
+
+<div px-10 text-4xl mb-4>
+  一起玩 异星工厂 Factorio
+</div>
+
+<video autoplay muted>
+  <source src="/airi-plays-factorio.mp4" />
 </video>
 
 ---
@@ -665,6 +684,59 @@ glowSeed: 210
     <img src="/relu-art-5.png" w-50>
   </div>
 </div>
+
+---
+class: py-10
+---
+
+# 一到两个人是不能 vibe 出来这么复杂的系统的
+
+我们也想寻找能够一起合作的以下领域的伙伴们...
+
+<div flex jusity-center flex-wrap flex-col gap-4 max-h-90 mb-10 mt-10>
+  <div flex items-center gap-3 w-fit>
+    <div i-solar:hand-stars-bold-duotone size-15 />
+    <div>产品经理</div>
+  </div>
+  <div flex items-center gap-3 w-fit>
+    <div i-solar:pen-new-square-bold-duotone size-15 />
+    <div>设计师</div>
+  </div>
+  <div flex items-center gap-3 w-fit>
+    <div i-solar:eye-bold-duotone size-15 />
+    <div>机器视觉（CV）</div>
+  </div>
+  <div flex items-center gap-3 w-fit>
+    <div i-solar:running-bold-duotone size-15 />
+    <div>强化学习（RL）</div>
+  </div>
+  <div flex items-center gap-3 w-fit>
+    <div i-solar:gamepad-minimalistic-bold-duotone size-15 />
+    <div>游戏开发者</div>
+  </div>
+  <div flex items-center gap-3 w-fit>
+    <div i-solar:microphone-bold-duotone size-15 />
+    <div>语音识别（ASR）</div>
+  </div>
+  <div flex items-center gap-3 w-fit>
+    <div i-solar:user-speak-rounded-bold-duotone size-15 />
+    <div>语音合成（TTS）</div>
+  </div>
+  <div flex items-center gap-3 w-fit>
+    <div i-solar:emoji-funny-square-bold-duotone size-15 />
+    <div>Live2D 建模师</div>
+  </div>
+  <div flex items-center gap-3 w-fit>
+    <div i-solar:people-nearby-bold-duotone size-15 />
+    <div>VRM 建模师 / VRChat 形象设计师</div>
+  </div>
+  <div flex items-center gap-3 w-fit>
+    <div i-solar:album-bold-duotone size-15 />
+    <div>Three.js 开发者（3D 场景）</div>
+  </div>
+</div>
+
+> <a href="https://github.com/moeru-ai/n3p6">我们另外还有个 WebXR / Vision Pro 的类似应用</a>
 
 ---
 class: py-10
